@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		031D33CF1CD331C000982547 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 031D33CE1CD331C000982547 /* CameraViewController.m */; };
 		146769061CC2732500D3D62F /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 146769051CC2732500D3D62F /* MainController.m */; };
 		14A68E991CC17C71008671DB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A68E981CC17C71008671DB /* main.m */; };
 		14A68E9C1CC17C71008671DB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A68E9B1CC17C71008671DB /* AppDelegate.m */; };
@@ -40,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		031D33CD1CD331C000982547 /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
+		031D33CE1CD331C000982547 /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
 		146769041CC2732500D3D62F /* MainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainController.h; sourceTree = "<group>"; };
 		146769051CC2732500D3D62F /* MainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainController.m; sourceTree = "<group>"; };
 		14A68E941CC17C71008671DB /* Dealer Image Pro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dealer Image Pro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,6 +126,8 @@
 				14A68E971CC17C71008671DB /* Supporting Files */,
 				146769041CC2732500D3D62F /* MainController.h */,
 				146769051CC2732500D3D62F /* MainController.m */,
+				031D33CD1CD331C000982547 /* CameraViewController.h */,
+				031D33CE1CD331C000982547 /* CameraViewController.m */,
 			);
 			path = "Dealer Image Pro";
 			sourceTree = "<group>";
@@ -290,6 +295,7 @@
 				14A68EA51CC17C71008671DB /* Dealer_Image_Pro.xcdatamodeld in Sources */,
 				14A68E9F1CC17C71008671DB /* ViewController.m in Sources */,
 				14A68E9C1CC17C71008671DB /* AppDelegate.m in Sources */,
+				031D33CF1CD331C000982547 /* CameraViewController.m in Sources */,
 				146769061CC2732500D3D62F /* MainController.m in Sources */,
 				14A68E991CC17C71008671DB /* main.m in Sources */,
 			);

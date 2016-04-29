@@ -23,7 +23,7 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
--(void)viewWillAppear{
+- (void)viewWillAppear:(BOOL)animated{
     NSString *strPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
     NSFileManager *manager = [NSFileManager defaultManager];
     fileList = [manager contentsOfDirectoryAtPath:strPath error:nil];

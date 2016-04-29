@@ -7,6 +7,7 @@
 //
 
 #import "MainController.h"
+#import "CameraViewController.h"
 
 @interface MainController (){
     NSString *strMainPath;
@@ -66,7 +67,12 @@
     }
     strMainPath = [self genDirectory];
     [self createDirForImage:strMainPath];
-
+    //after this we need to go to next screen, camera screen
+    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    CameraViewController *vc = [mainStoryboard instantiateViewControllerWithIdentifier:@"cameraView"];
+    vc.strImgDir = strMainPath;
+    [self presentModalViewController:vc animated:YES];
+    
 }
 
 
