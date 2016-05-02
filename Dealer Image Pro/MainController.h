@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MainController : UIViewController
+@interface MainController : UIViewController <UITextFieldDelegate>
+
 @property (weak, nonatomic) IBOutlet UITextField *stockNumer;
 @property (weak, nonatomic) IBOutlet UITextField *vehicleMake;
 @property (weak, nonatomic) IBOutlet UITextField *vehicleModel;

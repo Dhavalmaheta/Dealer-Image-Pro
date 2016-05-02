@@ -7,10 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UploadImages.h"
+
+@class DBRestClient;
 
 @interface ViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
 {
     IBOutlet UITableView *tvCars;
+
+    DBRestClient* restClient;
 }
 
 @end

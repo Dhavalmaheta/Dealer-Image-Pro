@@ -1,0 +1,24 @@
+//
+//  DealerImagePrefixHeader.pch
+//  Dealer Image Pro
+//
+//  Created by Mitul on 29/04/16.
+//  Copyright © 2016 gooey apps. All rights reserved.
+//
+
+#ifndef DealerImagePrefixHeader_pch
+#define DealerImagePrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "DBHelper.h"
+#import "AppDelegate.h"
+
+#endif /* DealerImagePrefixHeader_pch */
+
+
+
+#define PHOTO_FOLDER @"myPhotos"
+
+#define ENTITY_IMAGES @"UploadImages"

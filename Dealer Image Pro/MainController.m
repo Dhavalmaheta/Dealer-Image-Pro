@@ -7,6 +7,7 @@
 //
 
 #import "MainController.h"
+#import "ImageCaptureViewController.h"
 
 @interface MainController (){
     NSString *strMainPath;
@@ -36,8 +37,14 @@
 }
 */
 
+-(IBAction)onClickBack:(id)sender
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 - (IBAction)nextButton:(id)sender {
     if(![_stockNumer hasText]){
+        
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Stock Number is required"
                                                         message:nil
                                                        delegate:self
@@ -66,11 +73,29 @@
     }
     strMainPath = [self genDirectory];
     [self createDirForImage:strMainPath];
+    
+    ImageCaptureViewController *newView = [self.storyboard instantiateViewControllerWithIdentifier:@"ImageCaptureViewController"];
+    newView.strDirPath = strMainPath;
+    [self.navigationController pushViewController:newView animated:YES];
 
 }
 
+/*
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    if([[segue identifier] isEqualToString:@"ImageCaptureViewController"]){
+        //ImageCaptureViewController *mVC = [segue destinationViewController];
+        //mVC.strDirPath = strMainPath;
+        //[self performSegueWithIdentifier:@"ImageCaptureViewController" sender:self];
+    }
+} */
+
+
+
+
 
 -(NSString *)genDirectory{
+    
     //NSString *strPath = [NSHomeDirectory() stringByAppendingPathComponent:@"projectwax"];
     NSString *strDir = [NSString stringWithFormat:@"/(%@_%@)%@", _vehicleMake.text, _vehicleModel.text, _stockNumer.text];//(Ford_GT)A5112785
     //strPath = [strPath stringByAppendingString:strDir];
@@ -105,7 +130,12 @@
         }
     }
     return;
-    
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return  YES;
 }
 
 

@@ -8,9 +8,17 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
+#import <DropboxSDK/DropboxSDK.h>
+
+#define appKey1     @"pn32am9d3mmhchx"
+#define appSecret1  @"nrkpsqeqbrr6fya"
+#define root1       @"dropbox"
+
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
-
+{
+    NSString *relinkUserId;
+}
 @property (strong, nonatomic) UIWindow *window;
 
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
@@ -19,6 +27,8 @@
 
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
+
++(AppDelegate *)sharedAppDelegate;
 
 
 @end

@@ -8,17 +8,43 @@
 
 #import "AppDelegate.h"
 
-@interface AppDelegate ()
+@interface AppDelegate () <DBSessionDelegate, DBNetworkRequestDelegate>
 
 @end
 
 @implementation AppDelegate
 
++(AppDelegate *)sharedAppDelegate
+{
+    return (AppDelegate *)[UIApplication sharedApplication].delegate;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [self createPhotoFolder];
+    
+    DBSession* session = [[DBSession alloc] initWithAppKey:appKey1 appSecret:appSecret1 root:root1];
+    session.delegate = self;
+    [DBSession setSharedSession:session];
+    [DBRequest setNetworkRequestDelegate:self];
+    
+    
     return YES;
 }
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
+    if ([[DBSession sharedSession] handleOpenURL:url]) {
+        if ([[DBSession sharedSession] isLinked]) {
+            //[navigationController pushViewController:rootViewController.photoViewController animated:YES];
+            
+        }
+        return YES;
+    }
+    
+    return NO;
+}
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -123,5 +149,50 @@
         }
     }
 }
+
+#pragma mark -
+#pragma mark DBSessionDelegate methods
+
+- (void)sessionDidReceiveAuthorizationFailure:(DBSession*)session userId:(NSString *)userId {
+    
+    relinkUserId = userId;
+    [[[UIAlertView alloc]
+       initWithTitle:@"Dropbox Session Ended" message:@"Do you want to relink?" delegate:self
+       cancelButtonTitle:@"Cancel" otherButtonTitles:@"Relink", nil]
+     show];
+}
+
+#pragma mark -
+#pragma mark DBNetworkRequestDelegate methods
+
+static int outstandingRequests;
+
+- (void)networkRequestStarted {
+    outstandingRequests++;
+    if (outstandingRequests == 1) {
+        [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
+    }
+}
+
+- (void)networkRequestStopped {
+    outstandingRequests--;
+    if (outstandingRequests == 0) {
+        [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+    }
+}
+
+-(void)createPhotoFolder
+{
+    NSError *error;
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0]; // Get documents folder
+    NSString *strfilder = [NSString stringWithFormat:@"/%@",PHOTO_FOLDER];
+    NSString *dataPath = [documentsDirectory stringByAppendingPathComponent:strfilder];
+    
+    if (![[NSFileManager defaultManager] fileExistsAtPath:dataPath])
+        [[NSFileManager defaultManager] createDirectoryAtPath:dataPath withIntermediateDirectories:NO attributes:nil error:&error]; //Create folder
+}
+
+
 
 @end
