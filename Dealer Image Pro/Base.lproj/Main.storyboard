@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ArZ-9i-EMx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ArZ-9i-EMx">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -262,6 +262,9 @@
                                 </constraints>
                                 <blurEffect style="dark"/>
                             </visualEffectView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TTR-11-bmv">
+                                <rect key="frame" x="0.0" y="80" width="1024" height="688"/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dV6-4g-ep0">
                                 <rect key="frame" x="230" y="601" width="196" height="85"/>
                                 <subviews>
@@ -328,9 +331,6 @@
                                     <action selector="onClickReShoot:" destination="bpg-0V-noe" eventType="touchUpInside" id="76V-zk-Bd4"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TTR-11-bmv">
-                                <rect key="frame" x="0.0" y="80" width="1024" height="688"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -693,31 +693,25 @@
                                     <action selector="capturePhoto:" destination="Day-LE-nZs" eventType="touchUpInside" id="kQA-q2-lWJ"/>
                                 </connections>
                             </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="shb-PS-kFW">
-                                <rect key="frame" x="50" y="144" width="93" height="93"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="93" id="dnR-xX-c3B"/>
-                                    <constraint firstAttribute="height" constant="93" id="rRs-qa-QvH"/>
-                                </constraints>
-                                <state key="normal" image="rotate"/>
-                                <connections>
-                                    <action selector="onclickCameraMode:" destination="Day-LE-nZs" eventType="touchUpInside" id="dJU-2i-hoV"/>
-                                </connections>
-                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hero" translatesAutoresizingMaskIntoConstraints="NO" id="oFf-cB-RWo">
+                                <rect key="frame" x="0.0" y="132" width="1024" height="548"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="BMl-a0-emN" firstAttribute="top" secondItem="udP-T8-Fp5" secondAttribute="bottom" constant="-44" id="25f-Yf-iNz"/>
+                            <constraint firstItem="oFf-cB-RWo" firstAttribute="leading" secondItem="nio-vT-DSt" secondAttribute="leadingMargin" constant="-20" id="DlW-85-Gch"/>
                             <constraint firstItem="v2q-6D-NAQ" firstAttribute="top" secondItem="3FJ-PO-hVn" secondAttribute="bottom" id="FAr-uN-NSn"/>
                             <constraint firstItem="v2q-6D-NAQ" firstAttribute="top" secondItem="rrn-S1-JRj" secondAttribute="bottom" id="FQh-Qe-hul"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="oFf-cB-RWo" secondAttribute="trailing" constant="-20" id="GwS-7g-iDb"/>
                             <constraint firstItem="3FJ-PO-hVn" firstAttribute="leading" secondItem="nio-vT-DSt" secondAttribute="leading" id="IYU-uQ-b11"/>
                             <constraint firstAttribute="trailing" secondItem="3FJ-PO-hVn" secondAttribute="trailing" id="Ion-K2-uGg"/>
+                            <constraint firstItem="rrn-S1-JRj" firstAttribute="top" secondItem="oFf-cB-RWo" secondAttribute="bottom" constant="8" id="NsM-Ev-CxT"/>
                             <constraint firstItem="3FJ-PO-hVn" firstAttribute="top" secondItem="udP-T8-Fp5" secondAttribute="bottom" constant="-44" id="Wd9-nm-0oc"/>
                             <constraint firstItem="BMl-a0-emN" firstAttribute="leading" secondItem="nio-vT-DSt" secondAttribute="leading" id="XND-WA-xAp"/>
                             <constraint firstAttribute="trailingMargin" secondItem="NbU-Cn-Adu" secondAttribute="trailing" constant="5" id="YrQ-ez-gFZ"/>
-                            <constraint firstItem="shb-PS-kFW" firstAttribute="leading" secondItem="nio-vT-DSt" secondAttribute="leading" constant="50" id="fUN-4e-97S"/>
+                            <constraint firstItem="oFf-cB-RWo" firstAttribute="top" secondItem="wLB-UC-UWF" secondAttribute="bottom" constant="8" id="h8t-Ol-d61"/>
                             <constraint firstAttribute="trailing" secondItem="wLB-UC-UWF" secondAttribute="trailing" id="hpp-Fy-JNy"/>
-                            <constraint firstItem="shb-PS-kFW" firstAttribute="top" secondItem="wLB-UC-UWF" secondAttribute="bottom" constant="20" id="l1m-BS-lD6"/>
                             <constraint firstAttribute="trailing" secondItem="rrn-S1-JRj" secondAttribute="trailing" id="mcf-zZ-9Jf"/>
                             <constraint firstItem="wLB-UC-UWF" firstAttribute="top" secondItem="udP-T8-Fp5" secondAttribute="bottom" id="mxU-mM-0kL"/>
                             <constraint firstItem="v2q-6D-NAQ" firstAttribute="top" secondItem="BMl-a0-emN" secondAttribute="bottom" id="pIn-4h-o9x"/>
@@ -800,8 +794,8 @@
         <image name="darkcarbonFiber" width="2400" height="2400"/>
         <image name="detailArrow" width="20" height="20"/>
         <image name="goBack" width="512" height="512"/>
+        <image name="hero" width="1280" height="660"/>
         <image name="next" width="200" height="200"/>
-        <image name="rotate" width="80" height="80"/>
         <image name="textField" width="996" height="105"/>
         <image name="uploadIcon" width="600" height="600"/>
     </resources>
