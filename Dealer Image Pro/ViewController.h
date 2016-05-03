@@ -8,15 +8,23 @@
 
 #import <UIKit/UIKit.h>
 #import "UploadImages.h"
+#import "CarCell.h"
+#import "DropboxManager.h"
 
-@class DBRestClient;
 
-@interface ViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
+@interface ViewController : UIViewController<UITableViewDelegate,UITableViewDataSource , DropBoxDelegate , CarCellDelegate , UIAlertViewDelegate>
 {
     IBOutlet UITableView *tvCars;
-
     DBRestClient* restClient;
+    
+    DropboxManager *objManager;
+    
+    NSMutableArray *uploadArray;
+    
+    UIAlertView *deleteAlert;
 }
+@property (nonatomic,strong) DropboxManager *objManager;
+
 
 @end
 

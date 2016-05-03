@@ -12,12 +12,18 @@
 
 #define appKey1     @"pn32am9d3mmhchx"
 #define appSecret1  @"nrkpsqeqbrr6fya"
-#define root1       @"dropbox"
+#define root1       kDBRootDropbox  //@"dropbox"
 
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 {
     NSString *relinkUserId;
+    
+    UIView *loadView;
+    UIView *viewBack;
+    UILabel *lblLoading;
+    UIActivityIndicatorView *spinningWheel;
+
 }
 @property (strong, nonatomic) UIWindow *window;
 
@@ -30,6 +36,8 @@
 
 +(AppDelegate *)sharedAppDelegate;
 
+-(void)showLoadingView;
+-(void) hideLoadingView;
 
 @end
 

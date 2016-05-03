@@ -22,7 +22,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    [self createPhotoFolder];
+    ///[self createPhotoFolder];
     
     DBSession* session = [[DBSession alloc] initWithAppKey:appKey1 appSecret:appSecret1 root:root1];
     session.delegate = self;
@@ -192,6 +192,64 @@ static int outstandingRequests;
     if (![[NSFileManager defaultManager] fileExistsAtPath:dataPath])
         [[NSFileManager defaultManager] createDirectoryAtPath:dataPath withIntermediateDirectories:NO attributes:nil error:&error]; //Create folder
 }
+
+
+#pragma mark -
+#pragma mark - Loading View
+
+-(void)showLoadingView
+{
+    
+    if (loadView == nil)
+    {
+        loadView = [[UIView alloc] initWithFrame:self.window.frame];
+        loadView.opaque = NO;
+        loadView.backgroundColor = [UIColor clearColor];
+        //loadView.alpha = 0.7f;
+        
+        viewBack = [[UIView alloc] initWithFrame:CGRectMake(80, 230, 160, 70)];
+        viewBack.backgroundColor = [UIColor blackColor];
+        viewBack.alpha = 0.7f;
+        viewBack.layer.masksToBounds = NO;
+        viewBack.layer.cornerRadius = 5;
+        
+        spinningWheel = [[UIActivityIndicatorView alloc] initWithFrame:CGRectMake(5.0, 20.0, 30.0, 30.0)];
+        [spinningWheel startAnimating];
+        [viewBack addSubview:spinningWheel];
+        
+        lblLoading = [[UILabel alloc] initWithFrame:CGRectMake(40, 0, 110, 70)];
+        lblLoading.backgroundColor = [UIColor clearColor];
+        //lblLoading.textAlignment = NSTextAlignmentCenter;
+        lblLoading.text = @"Uploading Please Wait...";
+        lblLoading.numberOfLines = 2;
+        lblLoading.textColor = [UIColor whiteColor];
+        //lblLoading.font = FONT_FIRA_MEDIUM(15);
+        [viewBack addSubview:lblLoading];
+        [loadView addSubview:viewBack];
+        
+        if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+            
+            float y = (loadView.frame.size.height/2 ) - (viewBack.frame.size.height/2);
+            float x =(loadView.frame.size.width/2 ) - (viewBack.frame.size.width/2);
+            viewBack.frame = CGRectMake(x , y, 160, 70);;
+        }
+        else{
+            
+            float y = (loadView.frame.size.height/2 ) - (viewBack.frame.size.height/2);
+            float x =(loadView.frame.size.width/2 ) - (viewBack.frame.size.width/2);
+            viewBack.frame = CGRectMake(x , y, 160, 70);;
+        }
+    }
+    if(loadView.superview == nil)
+        [self.window addSubview:loadView];
+}
+
+-(void) hideLoadingView
+{
+    [loadView removeFromSuperview];
+    loadView=nil;
+}
+
 
 
 

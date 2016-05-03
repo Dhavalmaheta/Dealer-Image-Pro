@@ -71,11 +71,12 @@
         [alert show];
         return;
     }
+    
     strMainPath = [self genDirectory];
     [self createDirForImage:strMainPath];
     
     ImageCaptureViewController *newView = [self.storyboard instantiateViewControllerWithIdentifier:@"ImageCaptureViewController"];
-    newView.strDirPath = strMainPath;
+    newView.strDirPath =strMainPath;
     [self.navigationController pushViewController:newView animated:YES];
 
 }

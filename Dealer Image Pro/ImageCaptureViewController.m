@@ -18,6 +18,7 @@
 
 @synthesize strDirPath;
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -85,13 +86,6 @@
 - (IBAction)capturePhoto:(id)sender {
     [_recorder capturePhoto:^(NSError *error, UIImage *image) {
         if (image != nil) {
-
-            /*
-            ImageViewController *img =[[ImageViewController alloc]initWithNibName:@"ImageViewController" bundle:nil];
-            img.img = image;
-            [self.navigationController pushViewController:img animated:YES];
-             */
-            //[self pushtoMainView:image];
             
             ImagePreviewViewController *newView = [self.storyboard instantiateViewControllerWithIdentifier:@"ImagePreviewViewController"];
             newView.strDirPath = strDirPath;
@@ -110,6 +104,7 @@
     }];
 }
 
+/*
 -(void)pushtoMainView:(UIImage *)img
 {
     // save Image To Directory
@@ -137,7 +132,8 @@
                                               otherButtonTitles:nil];
         [alert show];
     }
-}
+} */
+
 
 
 -(IBAction)onclickCameraMode:(id)sender

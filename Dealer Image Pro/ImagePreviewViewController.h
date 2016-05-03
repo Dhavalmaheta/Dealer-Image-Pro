@@ -17,4 +17,6 @@
 
 @property (strong  ,nonatomic) UIImage *imgPrv;
 
+
+
 @end

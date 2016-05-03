@@ -22,6 +22,8 @@
 
 @implementation ViewController
 
+@synthesize objManager;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [[UIApplication sharedApplication] setStatusBarHidden:YES
@@ -31,18 +33,29 @@
    // [self getAllImagesFromCore];
     [[self navigationController] setNavigationBarHidden:YES animated:NO];
     
-    [self createFolderInDropboxWithName:@"TESTING CHECK"];
+    // [objManager logoutFromDropbox];
 }
 
 -(void)viewWillAppear:(BOOL)animated{
     
     [super viewWillAppear:animated];
+
+    objManager = [DropboxManager dropBoxManager];
+    objManager.apiCallDelegate =self;
+    [objManager initDropbox];
+    [objManager loginToDropbox];
     
+    [self getAllDirFromDocs];
+}
+
+-(void)getAllDirFromDocs
+{
     NSString *strPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
     NSFileManager *manager = [NSFileManager defaultManager];
     fileList = (NSMutableArray *) [manager contentsOfDirectoryAtPath:strPath error:nil];
     [tvCars reloadData];
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -51,14 +64,23 @@
 
 - (IBAction)uploadButton:(id)sender {
     
-    UIAlertView *uploadAlertView = [[UIAlertView alloc] initWithTitle:@"Upload to Dealer Image Pro" message:nil delegate:nil cancelButtonTitle:@"Cancel" otherButtonTitles:@"Upload", nil];
-    [uploadAlertView show];
-    
-    
+    if([fileList count] > 0){
+        NSString *dirName = [fileList objectAtIndex:0];
+        [self createFolderInDropboxWithName:dirName];
+    }else{
+        UIAlertView *alert =[[UIAlertView alloc]initWithTitle:@"No folder Available to upload" message:nil delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+        [alert show];
+    }
 }
 
 - (BOOL)prefersStatusBarHidden {
     return YES;
+}
+
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 50;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -67,22 +89,39 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"carCell"];
-    
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"carCell"];
-    }
-    
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    cell.textLabel.text = [fileList objectAtIndex:indexPath.row];
-    
-    /*
-    UploadImages *imgData = [fileList objectAtIndex:indexPath.row];
-    cell.textLabel.text = imgData.folderName;
-    */
+    CarCell *cell = (CarCell *) [tableView dequeueReusableCellWithIdentifier:@"carCell"];
+    //if (cell == nil) {
+        //cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"carCell"];
+  //  }
+    cell.cellIndex =  (int)indexPath.row;
+    cell.lblTitle.text = [fileList objectAtIndex:indexPath.row];
+    cell.delegate = self;
     
     return cell;
 }
+
+-(void)deleteButtonClickAtIndex:(int)index
+{
+    if([fileList count] > index){
+        
+        deleteAlert =[[UIAlertView alloc]initWithTitle:@"Are you sure ? you want to delete ?" message:nil delegate:self cancelButtonTitle:@"No" otherButtonTitles:@"Yes", nil];
+        deleteAlert.tag = index;
+        [deleteAlert show];
+    }
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if(alertView == deleteAlert){
+        if(buttonIndex == 1){
+            if([fileList count] > alertView.tag){
+                NSString *dirName = [fileList objectAtIndex:alertView.tag];
+                [self removeUploadedDir:dirName];
+            }
+        }
+    }
+}
+
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:
 (NSIndexPath *)indexPath{
@@ -109,7 +148,8 @@
 
 -(void)createFolderInDropboxWithName:(NSString *)strName
 {
-    [[self restClient] createFolder:strName];
+    NSString *strfolder = [[strName componentsSeparatedByString:@"/"] lastObject];
+    [self uploadImageWithFolderName:strfolder];
 }
 
 -(void)uploadImageWithFolderName:(NSString *)strDir
@@ -121,67 +161,103 @@
     NSFileManager *manager = [NSFileManager defaultManager];
     NSArray *arrTotalImages =  [manager contentsOfDirectoryAtPath:strPath error:nil];
     
-    [[self restClient] createFolder:strDir];
+    if([arrTotalImages count] ==0 ){
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"No photo Available please capture photo." message:nil delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
+        return;
+    }
     
+    [[AppDelegate sharedAppDelegate]showLoadingView];
+    uploadArray =[[NSMutableArray alloc]init];
     for (int i=0 ; i< [arrTotalImages count]; i++) {
         
         NSString *strfileName = [arrTotalImages objectAtIndex:i];
-        NSString *destifilePath = [NSString stringWithFormat:@"%@/%@" ,strDir ,strfileName];
+        NSString *destifilePath = [NSString stringWithFormat:@"/%@/%@" ,strDir ,strfileName];
         
         NSString *sourcePath = [NSString stringWithFormat:@"%@/%@", strPath , strfileName];
-
+        
+        
         NSLog(@"DESTINATION FILE %@", destifilePath);
         NSLog(@"SOURCE FILE %@", sourcePath);
         
-        [[self restClient] uploadFile:strfileName toPath:destifilePath withParentRev:nil fromPath:sourcePath];
+        [uploadArray addObject:destifilePath];
+        
+        objManager.strFileName = strfileName;
+        objManager.strDestDirectory = [NSString stringWithFormat:@"/%@" ,strDir];
+        objManager.strFilePath = sourcePath;
+        [objManager uploadFile];
+        
     }
 }
 
 
-#pragma mark DBRestClientDelegate methods
+#pragma mark -
+#pragma mark - DROPBOX MANAGER DELEGATES
 
-- (void)restClient:(DBRestClient*)client loadedMetadata:(DBMetadata*)metadata {
+- (void)finishedLogin:(NSMutableDictionary*)userInfo
+{
+    NSLog(@"FINISH LOGIN %@",userInfo);
+}
+- (void)failedToLogin:(NSString*)withMessage
+{
+    NSLog(@"FAIL LOGIN %@", withMessage);
+}
+
+- (void)finishedCreateFolder:(NSString *)folderName
+{
+    NSLog(@"CREATE FOLDER SUCCESSFULLY %@",folderName);
     
-   // [photosHash release];
-   // photosHash = [metadata.hash retain];
+}
+
+
+- (void)failedToCreateFolder:(NSString*)withMessage
+{
+    NSLog(@"FAILT TO CREATE FOLDER %@", withMessage);
+}
+
+- (void)finishedUploadFile:(NSString *)uploadFile
+{
+    NSLog(@"UPLOAD FILE  %@", uploadFile);
     
-    /*
-    NSArray* validExtensions = [NSArray arrayWithObjects:@"jpg", @"jpeg", nil];
-    NSMutableArray* newPhotoPaths = [NSMutableArray new];
-    for (DBMetadata* child in metadata.contents) {
-        NSString* extension = [[child.path pathExtension] lowercaseString];
-        if (!child.isDirectory && [validExtensions indexOfObject:extension] != NSNotFound) {
-            [newPhotoPaths addObject:child.path];
-        }
+    if([uploadArray count] > 0){
+        [uploadArray removeObject:uploadFile];
     }
-     */
     
-   // [photoPaths release];
-   // photoPaths = newPhotoPaths;
-   // [self loadRandomPhoto];
+    if([uploadArray count] ==0){
+        
+        [[AppDelegate sharedAppDelegate]hideLoadingView];
+        
+        UIAlertView *alert =[[UIAlertView alloc]initWithTitle:@"All Photos Uploaded successfully." message:nil delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
+        
+        [self removeUploadedDir:uploadFile];
+        
+    }
 }
-
-- (void)restClient:(DBRestClient*)client metadataUnchangedAtPath:(NSString*)path {
-   // [self loadRandomPhoto];
-}
-
-- (void)restClient:(DBRestClient*)client loadMetadataFailedWithError:(NSError*)error {
-    NSLog(@"restClient:loadMetadataFailedWithError: %@", [error localizedDescription]);
-   // [self displayError];
-   // [self setWorking:NO];
-}
-
-- (void)restClient:(DBRestClient*)client loadedThumbnail:(NSString*)destPath {
-   // [self setWorking:NO];
-   // imageView.image = [UIImage imageWithContentsOfFile:destPath];
-}
-
-- (void)restClient:(DBRestClient*)client loadThumbnailFailedWithError:(NSError*)error {
-   // [self setWorking:NO];
-   // [self displayError];
+- (void)failedToUploadFile:(NSString*)withMessage
+{
+    NSLog(@"FAILT TO UPLOAD FILE %@", withMessage);
+    [[AppDelegate sharedAppDelegate]hideLoadingView];
 }
 
 
+
+-(void)removeUploadedDir:(NSString *)dirPath
+{
+    
+    NSString *dirName = [[dirPath componentsSeparatedByString:@"/"] firstObject];
+    if(dirName != nil){
+        NSString *path;
+        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+        path = [[paths objectAtIndex:0] stringByAppendingPathComponent:dirName];
+        [[NSFileManager defaultManager] removeItemAtPath:path error:nil];
+        
+        [self getAllDirFromDocs];
+    }else{
+        UIAlertView *alert =[[UIAlertView alloc]initWithTitle:@"Fail To delete Directory." message:nil delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
+    }
+}
 
 
 -(void)getAllImagesFromCore
@@ -195,13 +271,6 @@
     [tvCars reloadData];
 }
 
-- (DBRestClient*)restClient {
-    if (restClient == nil) {
-        restClient = [[DBRestClient alloc] initWithSession:[DBSession sharedSession]];
-        restClient.delegate = self;
-    }
-    return restClient;
-}
 
 
 

@@ -57,7 +57,9 @@
 		282EFD8D1CD46C0800E29E74 /* UIImage+SCSaveToCameraRoll.m in Sources */ = {isa = PBXBuildFile; fileRef = 282EFD6D1CD46C0800E29E74 /* UIImage+SCSaveToCameraRoll.m */; };
 		282EFD911CD48F2E00E29E74 /* ImagePreviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 282EFD901CD48F2E00E29E74 /* ImagePreviewViewController.m */; };
 		2830C4C91CD4AF4400F1FC58 /* ConfirmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2830C4C81CD4AF4400F1FC58 /* ConfirmViewController.m */; };
-		28D4B5F21CD708C70029CC69 /* DropboxSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 282EFC8D1CD45AC200E29E74 /* DropboxSDK.framework */; };
+		284AD4231CD8514600B52855 /* CarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 284AD4221CD8514600B52855 /* CarCell.m */; };
+		285137CB1CD86BE9007CB800 /* DropboxSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 282EFC8D1CD45AC200E29E74 /* DropboxSDK.framework */; };
+		28D4B5F81CD71BCF0029CC69 /* DropboxManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D4B5F71CD71BCF0029CC69 /* DropboxManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -177,6 +179,10 @@
 		2830C4C71CD4AF4400F1FC58 /* ConfirmViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfirmViewController.h; sourceTree = "<group>"; };
 		2830C4C81CD4AF4400F1FC58 /* ConfirmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfirmViewController.m; sourceTree = "<group>"; };
 		28387CF81CD39D8A006BB567 /* DealerImagePrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DealerImagePrefixHeader.pch; sourceTree = "<group>"; };
+		284AD4211CD8514600B52855 /* CarCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarCell.h; sourceTree = "<group>"; };
+		284AD4221CD8514600B52855 /* CarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarCell.m; sourceTree = "<group>"; };
+		28D4B5F61CD71BCF0029CC69 /* DropboxManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropboxManager.h; sourceTree = "<group>"; };
+		28D4B5F71CD71BCF0029CC69 /* DropboxManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,7 +190,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28D4B5F21CD708C70029CC69 /* DropboxSDK.framework in Frameworks */,
+				285137CB1CD86BE9007CB800 /* DropboxSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,6 +257,8 @@
 				282EFD901CD48F2E00E29E74 /* ImagePreviewViewController.m */,
 				2830C4C71CD4AF4400F1FC58 /* ConfirmViewController.h */,
 				2830C4C81CD4AF4400F1FC58 /* ConfirmViewController.m */,
+				284AD4211CD8514600B52855 /* CarCell.h */,
+				284AD4221CD8514600B52855 /* CarCell.m */,
 			);
 			path = "Dealer Image Pro";
 			sourceTree = "<group>";
@@ -295,6 +303,8 @@
 		2809FE631CD3B99900E6F8D3 /* externalLib */ = {
 			isa = PBXGroup;
 			children = (
+				28D4B5F61CD71BCF0029CC69 /* DropboxManager.h */,
+				28D4B5F71CD71BCF0029CC69 /* DropboxManager.m */,
 				282EFD271CD46C0800E29E74 /* Recorder */,
 				2809FE641CD3B99900E6F8D3 /* DBHelper.h */,
 				2809FE651CD3B99900E6F8D3 /* DBHelper.m */,
@@ -562,6 +572,7 @@
 				282EFD711CD46C0800E29E74 /* SCVideoConfiguration.m in Sources */,
 				146769061CC2732500D3D62F /* MainController.m in Sources */,
 				282EFD891CD46C0800E29E74 /* SCSampleBufferHolder.m in Sources */,
+				284AD4231CD8514600B52855 /* CarCell.m in Sources */,
 				282EFD6E1CD46C0800E29E74 /* SCAudioConfiguration.m in Sources */,
 				282EFD8D1CD46C0800E29E74 /* UIImage+SCSaveToCameraRoll.m in Sources */,
 				282EFD7F1CD46C0800E29E74 /* SCIOPixelBuffers.m in Sources */,
@@ -572,6 +583,7 @@
 				282EFD831CD46C0800E29E74 /* SCRecorderTools.m in Sources */,
 				282EFD771CD46C0800E29E74 /* SCVideoPlayerView.m in Sources */,
 				282EFD881CD46C0800E29E74 /* SCRecordSessionSegment.m in Sources */,
+				28D4B5F81CD71BCF0029CC69 /* DropboxManager.m in Sources */,
 				282EFD261CD46B6E00E29E74 /* ImageCaptureViewController.m in Sources */,
 				282EFD861CD46C0800E29E74 /* SCRecordSession.m in Sources */,
 				282EFD741CD46C0800E29E74 /* SCImageView.m in Sources */,
@@ -751,6 +763,18 @@
 					"$(PROJECT_DIR)/Dealer",
 					Image,
 					Pro/frmwork,
+					"$(PROJECT_DIR)/Dealer",
+					Image,
+					Pro/frmwork,
+					"$(PROJECT_DIR)/Dealer",
+					Image,
+					Pro/frmwork,
+					"$(PROJECT_DIR)/Dealer",
+					Image,
+					Pro/frmwork,
+					"$(PROJECT_DIR)/Dealer",
+					Image,
+					Pro/frmwork,
 				);
 				GCC_PREFIX_HEADER = "Dealer Image Pro/DealerImagePrefixHeader.pch";
 				INFOPLIST_FILE = "Dealer Image Pro/Info.plist";
@@ -771,6 +795,18 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(PROJECT_DIR)/Dealer",
+					Image,
+					Pro/frmwork,
+					"$(PROJECT_DIR)/Dealer",
+					Image,
+					Pro/frmwork,
+					"$(PROJECT_DIR)/Dealer",
+					Image,
+					Pro/frmwork,
+					"$(PROJECT_DIR)/Dealer",
+					Image,
+					Pro/frmwork,
 					"$(PROJECT_DIR)/Dealer",
 					Image,
 					Pro/frmwork,

@@ -17,24 +17,14 @@
 @synthesize strDirPath;
 @synthesize imgPrv;
 
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     if(self.imgPrv != nil){
         
-        /*NSString *path;
-        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-        path = [[paths objectAtIndex:0] stringByAppendingPathComponent:strDirPath];
-        NSError *error;
-        
-        NSLog(@"FILE DICT %@", path);
-        
-        NSString *strFilename = [[strDirPath componentsSeparatedByString:@"/"] lastObject];
-        NSString *strPath =[NSString stringWithFormat:@"%@/%@.jpg",path , strFilename];
-         */
         imgPreview.image = self.imgPrv;
     }
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -50,6 +40,7 @@
 
 -(IBAction)onClickNext:(id)sender
 {
+    
     
     if(strDirPath != nil){
         
@@ -99,14 +90,10 @@
 }
 
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+
+
+
+
 
 @end
