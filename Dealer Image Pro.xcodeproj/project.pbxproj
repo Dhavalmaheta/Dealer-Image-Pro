@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		032657F01CDA0EBA0013D33B /* DropboxSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 282EFC8D1CD45AC200E29E74 /* DropboxSDK.framework */; };
 		146769061CC2732500D3D62F /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 146769051CC2732500D3D62F /* MainController.m */; };
 		14A68E991CC17C71008671DB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A68E981CC17C71008671DB /* main.m */; };
 		14A68E9C1CC17C71008671DB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A68E9B1CC17C71008671DB /* AppDelegate.m */; };
@@ -59,7 +60,6 @@
 		2830C4C91CD4AF4400F1FC58 /* ConfirmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2830C4C81CD4AF4400F1FC58 /* ConfirmViewController.m */; };
 		284AD4231CD8514600B52855 /* CarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 284AD4221CD8514600B52855 /* CarCell.m */; };
 		28D4B5F81CD71BCF0029CC69 /* DropboxManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D4B5F71CD71BCF0029CC69 /* DropboxManager.m */; };
-		28FEC02B1CD90837003806B6 /* DropboxSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 282EFC8D1CD45AC200E29E74 /* DropboxSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -190,7 +190,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28FEC02B1CD90837003806B6 /* DropboxSDK.framework in Frameworks */,
+				032657F01CDA0EBA0013D33B /* DropboxSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -783,6 +783,12 @@
 					"$(PROJECT_DIR)/Dealer",
 					Image,
 					Pro/frmwork,
+					"$(PROJECT_DIR)/Dealer",
+					Image,
+					Pro/frmwork,
+					"$(PROJECT_DIR)/Dealer",
+					Image,
+					Pro/frmwork,
 				);
 				GCC_PREFIX_HEADER = "Dealer Image Pro/DealerImagePrefixHeader.pch";
 				INFOPLIST_FILE = "Dealer Image Pro/Info.plist";
@@ -803,6 +809,12 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(PROJECT_DIR)/Dealer",
+					Image,
+					Pro/frmwork,
+					"$(PROJECT_DIR)/Dealer",
+					Image,
+					Pro/frmwork,
 					"$(PROJECT_DIR)/Dealer",
 					Image,
 					Pro/frmwork,

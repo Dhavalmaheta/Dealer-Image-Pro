@@ -187,9 +187,9 @@
     
     NSString *strImageName;
     if([arrTotalImages count] > 9){
-        strImageName =[NSString stringWithFormat:@"%@#_%d",strStockNumber,arrTotalImages.count +1] ;
+        strImageName =[NSString stringWithFormat:@"%@--%d",strStockNumber,arrTotalImages.count +1] ;
     }else{
-        strImageName =[NSString stringWithFormat:@"%@_0%d",strStockNumber,arrTotalImages.count + 1] ;
+        strImageName =[NSString stringWithFormat:@"%@--0%d",strStockNumber,arrTotalImages.count + 1] ;
     }
     
     return strImageName;
@@ -205,13 +205,13 @@
     
     if (arrTotalImages.count == 0) {
         lblTitle.text = Hero;
-        imgFocusView.image = [UIImage imageNamed:@"Focus1"];
+        imgFocusView.image = [UIImage imageNamed:@"Focus1.png"];
     }else if (arrTotalImages.count == 1){
         lblTitle.text = Front;
-        imgFocusView.image = [UIImage imageNamed:@"Focus2"];
+        imgFocusView.image = [UIImage imageNamed:@"Focus2.png"];
     }else if (arrTotalImages.count == 2){
         lblTitle.text = Hero2;
-        imgFocusView.image = [UIImage imageNamed:@"Focus3"];
+        imgFocusView.image = [UIImage imageNamed:@"Focus3.png"];
     }
 }
 
