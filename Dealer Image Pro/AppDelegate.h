@@ -14,6 +14,11 @@
 #define appSecret1  @"nrkpsqeqbrr6fya"
 #define root1       kDBRootDropbox  //@"dropbox"
 
+#define Hero   @"Hero"
+#define Front  @"Front"
+#define Hero2  @"Hero 2"
+#define Next   @"Next"
+#define Done   @"Done"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 {

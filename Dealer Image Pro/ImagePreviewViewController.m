@@ -16,6 +16,7 @@
 
 @synthesize strDirPath;
 @synthesize imgPrv;
+@synthesize strNumberStock;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -27,6 +28,12 @@
 
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [self setImageCount:strDirPath];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
@@ -41,13 +48,13 @@
 -(IBAction)onClickNext:(id)sender
 {
     
-    
     if(strDirPath != nil){
         
         NSString *path;
         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
         path = [[paths objectAtIndex:0] stringByAppendingPathComponent:strDirPath];
         // NSError *error;
+    
         
         NSLog(@"FILE DICT %@", path);
         
@@ -65,7 +72,6 @@
         [alert show];
     }
     
-    
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
@@ -81,15 +87,29 @@
     
     NSString *strImageName;
     if([arrTotalImages count] > 9){
-        strImageName =[NSString stringWithFormat:@"Stock#_%d",arrTotalImages.count +1] ;
+        strImageName =[NSString stringWithFormat:@"%@#_%d",strNumberStock,arrTotalImages.count +1] ;
     }else{
-        strImageName =[NSString stringWithFormat:@"Stock#_0%d",arrTotalImages.count + 1] ;
+        strImageName =[NSString stringWithFormat:@"%@#_0%d",strNumberStock,arrTotalImages.count + 1] ;
     }
     
     return strImageName;
 }
-
-
+-(void)setImageCount:(NSString *)dir
+{
+    NSString *strPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+    strPath = [strPath stringByAppendingPathComponent:dir];
+    
+    NSFileManager *manager = [NSFileManager defaultManager];
+    NSArray *arrTotalImages =  [manager contentsOfDirectoryAtPath:strPath error:nil];
+    
+    if (arrTotalImages.count == 0) {
+        lblDone.text = Next;
+    }else if (arrTotalImages.count == 1){
+        lblDone.text = Next;
+    }else if (arrTotalImages.count >= 2){
+        lblDone.text = Done;
+    }
+}
 
 
 

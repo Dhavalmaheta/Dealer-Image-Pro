@@ -45,6 +45,7 @@
     [objManager initDropbox];
     [objManager loginToDropbox];
     
+    //[objManager logoutFromDropbox];
     [self getAllDirFromDocs];
 }
 
@@ -117,24 +118,25 @@
             if([fileList count] > alertView.tag){
                 NSString *dirName = [fileList objectAtIndex:alertView.tag];
                 [self removeUploadedDir:dirName];
+                
+                [self getAllDirFromDocs];
             }
         }
     }
 }
 
 
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:
-(NSIndexPath *)indexPath{
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     /*
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     NSLog(@"Row:%d selected and its data is %@",
           indexPath.row,cell.textLabel.text);
-     */
     
     strSelectedDir  =[fileList objectAtIndex:indexPath.row];
-    [self performSegueWithIdentifier:@"ImageCaptureViewController1" sender:self];
+    [self performSegueWithIdentifier:@"ImageCaptureViewController1" sender:self];*/
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -226,14 +228,29 @@
     if([uploadArray count] ==0){
         
         [[AppDelegate sharedAppDelegate]hideLoadingView];
-        
-        UIAlertView *alert =[[UIAlertView alloc]initWithTitle:@"All Photos Uploaded successfully." message:nil delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
-        [alert show];
-        
         [self removeUploadedDir:uploadFile];
         
+        [self performSelector:@selector(uploadAgain) withObject:nil afterDelay:0.5f];
     }
 }
+
+-(void)uploadAgain
+{
+    NSString *strPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+    NSFileManager *manager = [NSFileManager defaultManager];
+    fileList = (NSMutableArray *) [manager contentsOfDirectoryAtPath:strPath error:nil];
+    [tvCars reloadData];
+    
+    if([fileList count] == 0){
+        UIAlertView *alert =[[UIAlertView alloc]initWithTitle:@"All Photos Uploaded successfully." message:nil delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
+    }else{
+        NSString *dirName = [fileList objectAtIndex:0];
+        [self createFolderInDropboxWithName:dirName];
+    }
+
+}
+
 - (void)failedToUploadFile:(NSString*)withMessage
 {
     NSLog(@"FAILT TO UPLOAD FILE %@", withMessage);
@@ -245,14 +262,14 @@
 -(void)removeUploadedDir:(NSString *)dirPath
 {
     
-    NSString *dirName = [[dirPath componentsSeparatedByString:@"/"] firstObject];
+    NSString *dirName = [[[dirPath substringFromIndex:1] componentsSeparatedByString:@"/"] firstObject];
     if(dirName != nil){
         NSString *path;
         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
         path = [[paths objectAtIndex:0] stringByAppendingPathComponent:dirName];
+        NSLog(@"DELETE PATH  >>>>>>>>>  %@", path);
         [[NSFileManager defaultManager] removeItemAtPath:path error:nil];
         
-        [self getAllDirFromDocs];
     }else{
         UIAlertView *alert =[[UIAlertView alloc]initWithTitle:@"Fail To delete Directory." message:nil delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alert show];

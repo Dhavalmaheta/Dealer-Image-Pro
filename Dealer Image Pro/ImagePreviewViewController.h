@@ -11,9 +11,13 @@
 @interface ImagePreviewViewController : UIViewController
 {
     IBOutlet UIImageView *imgPreview;
+    IBOutlet UILabel *lblDone;
+    
+    NSInteger countPat;
 }
 
 @property (strong , nonatomic)NSString *strDirPath;
+@property (strong , nonatomic)NSString *strNumberStock;
 
 @property (strong  ,nonatomic) UIImage *imgPrv;
 

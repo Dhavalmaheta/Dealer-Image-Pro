@@ -17,7 +17,7 @@
 @implementation ImageCaptureViewController
 
 @synthesize strDirPath;
-
+@synthesize strStockNumber;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -38,6 +38,7 @@
     if (![_recorder prepare:&error]) {
         NSLog(@"Prepare error: %@", error.localizedDescription);
     }
+    imgFocusView.hidden = NO;
 }
 
 - (void)recorder:(SCRecorder *)recorder didSkipVideoSampleBufferInSession:(SCRecordSession *)recordSession {
@@ -57,6 +58,9 @@
     [super viewWillAppear:animated];
     
     [self prepareSession];
+    [self setImageTitle:strDirPath];
+    
+    [self.view bringSubviewToFront:imgFocusView];
 }
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
@@ -68,28 +72,40 @@
     [super viewDidAppear:animated];
     
     [_recorder startRunning];
+    
+    NSString *strPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+    strPath = [strPath stringByAppendingPathComponent:strDirPath];
+    
+    NSFileManager *manager = [NSFileManager defaultManager];
+    NSArray *arrTotalImages =  [manager contentsOfDirectoryAtPath:strPath error:nil];
+
+    if (arrTotalImages.count >= 3) {
+        [self.navigationController popToRootViewControllerAnimated:NO];
+    }
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     
     [_recorder stopRunning];
+    //imgFocusView.hidden = YES;
 }
 
 
 -(IBAction)onClickBackToMain:(id)sender
 {
-    [self.navigationController popToRootViewControllerAnimated:YES];
+//    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 
 - (IBAction)capturePhoto:(id)sender {
     [_recorder capturePhoto:^(NSError *error, UIImage *image) {
         if (image != nil) {
-            
+
             ImagePreviewViewController *newView = [self.storyboard instantiateViewControllerWithIdentifier:@"ImagePreviewViewController"];
             newView.strDirPath = strDirPath;
             newView.imgPrv = image;
+            newView.strNumberStock = strStockNumber;
             [self.navigationController presentViewController:newView animated:YES completion:nil];
             
         } else {
@@ -104,6 +120,14 @@
     }];
 }
 
+-(void)captureImage{
+    
+    if (btnCapture.isSelected) {
+      //  imgFocusView.hidden = YES;
+    }else{
+        
+    }
+}
 /*
 -(void)pushtoMainView:(UIImage *)img
 {
@@ -163,15 +187,33 @@
     
     NSString *strImageName;
     if([arrTotalImages count] > 9){
-        strImageName =[NSString stringWithFormat:@"Stock#_%d",arrTotalImages.count +1] ;
+        strImageName =[NSString stringWithFormat:@"%@#_%d",strStockNumber,arrTotalImages.count +1] ;
     }else{
-        strImageName =[NSString stringWithFormat:@"Stock#_0%d",arrTotalImages.count + 1] ;
+        strImageName =[NSString stringWithFormat:@"%@_0%d",strStockNumber,arrTotalImages.count + 1] ;
     }
     
     return strImageName;
 }
 
-
+-(void)setImageTitle:(NSString *)dir
+{
+    NSString *strPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+    strPath = [strPath stringByAppendingPathComponent:dir];
+    
+    NSFileManager *manager = [NSFileManager defaultManager];
+    NSArray *arrTotalImages =  [manager contentsOfDirectoryAtPath:strPath error:nil];
+    
+    if (arrTotalImages.count == 0) {
+        lblTitle.text = Hero;
+        imgFocusView.image = [UIImage imageNamed:@"Focus1"];
+    }else if (arrTotalImages.count == 1){
+        lblTitle.text = Front;
+        imgFocusView.image = [UIImage imageNamed:@"Focus2"];
+    }else if (arrTotalImages.count == 2){
+        lblTitle.text = Hero2;
+        imgFocusView.image = [UIImage imageNamed:@"Focus3"];
+    }
+}
 
 - (void)recorder:(SCRecorder *)recorder didCompleteSession:(SCRecordSession *)recordSession {
     NSLog(@"didCompleteSession:");

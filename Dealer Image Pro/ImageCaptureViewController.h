@@ -22,11 +22,17 @@
     UIImage *_photo;
     SCRecordSession *_recordSession;
     UIImageView *_ghostImageView;
+    
+    IBOutlet UILabel *lblTitle;
+    IBOutlet UIImageView *imgFocusView;
+    
+    IBOutlet UIButton *btnCapture;
 }
 @property (strong, nonatomic) SCRecorderToolsView *focusView;
 @property (weak, nonatomic) IBOutlet UIView *previewView;
 
 
 @property (strong , nonatomic)NSString *strDirPath;
+@property (strong , nonatomic)NSString *strStockNumber;
 
 @end

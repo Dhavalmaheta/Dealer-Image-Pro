@@ -58,8 +58,8 @@
 		282EFD911CD48F2E00E29E74 /* ImagePreviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 282EFD901CD48F2E00E29E74 /* ImagePreviewViewController.m */; };
 		2830C4C91CD4AF4400F1FC58 /* ConfirmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2830C4C81CD4AF4400F1FC58 /* ConfirmViewController.m */; };
 		284AD4231CD8514600B52855 /* CarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 284AD4221CD8514600B52855 /* CarCell.m */; };
-		285137CB1CD86BE9007CB800 /* DropboxSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 282EFC8D1CD45AC200E29E74 /* DropboxSDK.framework */; };
 		28D4B5F81CD71BCF0029CC69 /* DropboxManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D4B5F71CD71BCF0029CC69 /* DropboxManager.m */; };
+		28FEC02B1CD90837003806B6 /* DropboxSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 282EFC8D1CD45AC200E29E74 /* DropboxSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -190,7 +190,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				285137CB1CD86BE9007CB800 /* DropboxSDK.framework in Frameworks */,
+				28FEC02B1CD90837003806B6 /* DropboxSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,7 +483,6 @@
 				TargetAttributes = {
 					14A68E931CC17C71008671DB = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = N75LCCG6J6;
 					};
 					14A68EAF1CC17C71008671DB = {
 						CreatedOnToolsVersion = 7.3;
@@ -775,6 +774,15 @@
 					"$(PROJECT_DIR)/Dealer",
 					Image,
 					Pro/frmwork,
+					"$(PROJECT_DIR)/Dealer",
+					Image,
+					Pro/frmwork,
+					"$(PROJECT_DIR)/Dealer",
+					Image,
+					Pro/frmwork,
+					"$(PROJECT_DIR)/Dealer",
+					Image,
+					Pro/frmwork,
 				);
 				GCC_PREFIX_HEADER = "Dealer Image Pro/DealerImagePrefixHeader.pch";
 				INFOPLIST_FILE = "Dealer Image Pro/Info.plist";
@@ -795,6 +803,15 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(PROJECT_DIR)/Dealer",
+					Image,
+					Pro/frmwork,
+					"$(PROJECT_DIR)/Dealer",
+					Image,
+					Pro/frmwork,
+					"$(PROJECT_DIR)/Dealer",
+					Image,
+					Pro/frmwork,
 					"$(PROJECT_DIR)/Dealer",
 					Image,
 					Pro/frmwork,
