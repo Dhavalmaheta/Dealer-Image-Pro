@@ -664,7 +664,7 @@
                                     <action selector="capturePhoto:" destination="Day-LE-nZs" eventType="touchUpInside" id="kQA-q2-lWJ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="shb-PS-kFW">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="shb-PS-kFW">
                                 <rect key="frame" x="50" y="144" width="93" height="93"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="93" id="dnR-xX-c3B"/>
