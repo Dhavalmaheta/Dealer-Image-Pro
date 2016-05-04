@@ -39,6 +39,8 @@
         NSLog(@"Prepare error: %@", error.localizedDescription);
     }
     imgFocusView.hidden = NO;
+    
+    
 }
 
 - (void)recorder:(SCRecorder *)recorder didSkipVideoSampleBufferInSession:(SCRecordSession *)recordSession {
@@ -60,7 +62,10 @@
     [self prepareSession];
     [self setImageTitle:strDirPath];
     
-    [self.view bringSubviewToFront:imgFocusView];
+    //[self.view bringSubviewToFront:imgFocusView];
+    
+   
+    
 }
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
@@ -187,9 +192,9 @@
     
     NSString *strImageName;
     if([arrTotalImages count] > 9){
-        strImageName =[NSString stringWithFormat:@"%@--%d",strStockNumber,arrTotalImages.count +1] ;
+        strImageName =[NSString stringWithFormat:@"%@#_%d",strStockNumber,arrTotalImages.count +1] ;
     }else{
-        strImageName =[NSString stringWithFormat:@"%@--0%d",strStockNumber,arrTotalImages.count + 1] ;
+        strImageName =[NSString stringWithFormat:@"%@_0%d",strStockNumber,arrTotalImages.count + 1] ;
     }
     
     return strImageName;

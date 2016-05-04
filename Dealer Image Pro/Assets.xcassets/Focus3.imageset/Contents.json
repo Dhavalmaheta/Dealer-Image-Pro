@@ -1,18 +1,18 @@
 {
   "images" : [
     {
-      "idiom" : "iphone",
+      "idiom" : "universal",
       "filename" : "Focus3.png",
       "scale" : "1x"
     },
     {
-      "idiom" : "iphone",
-      "filename" : "Focus3-1.png",
+      "idiom" : "universal",
+      "filename" : "Focus3@2x.png",
       "scale" : "2x"
     },
     {
-      "idiom" : "iphone",
-      "filename" : "Focus3-2.png",
+      "idiom" : "universal",
+      "filename" : "Focus3@3x.png",
       "scale" : "3x"
     }
   ],
