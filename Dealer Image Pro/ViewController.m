@@ -105,7 +105,7 @@
 {
     if([fileList count] > index){
         
-        deleteAlert =[[UIAlertView alloc]initWithTitle:@"Are you sure ? you want to delete ?" message:nil delegate:self cancelButtonTitle:@"No" otherButtonTitles:@"Yes", nil];
+        deleteAlert =[[UIAlertView alloc]initWithTitle:@"Are you sure you want to delete this vehicle?" message:nil delegate:self cancelButtonTitle:@"No" otherButtonTitles:@"Yes", nil];
         deleteAlert.tag = index;
         [deleteAlert show];
     }
