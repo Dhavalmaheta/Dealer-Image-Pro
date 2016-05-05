@@ -185,7 +185,7 @@
         [uploadArray addObject:destifilePath];
         
         objManager.strFileName = strfileName;
-        objManager.strDestDirectory = [NSString stringWithFormat:@"/%@" ,strDir];
+        objManager.strDestDirectory = [NSString stringWithFormat:@"/APP/%@" ,strDir];
         objManager.strFilePath = sourcePath;
         [objManager uploadFile];
         
@@ -262,7 +262,7 @@
 -(void)removeUploadedDir:(NSString *)dirPath
 {
     
-    NSString *dirName = [[[dirPath substringFromIndex:1] componentsSeparatedByString:@"/"] firstObject];
+    NSString *dirName = [[[dirPath substringFromIndex:0] componentsSeparatedByString:@"/"] firstObject];
     if(dirName != nil){
         NSString *path;
         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);

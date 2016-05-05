@@ -87,9 +87,9 @@
     
     NSString *strImageName;
     if([arrTotalImages count] > 9){
-        strImageName =[NSString stringWithFormat:@"%@#_%d",strNumberStock,arrTotalImages.count +1] ;
+        strImageName =[NSString stringWithFormat:@"%@--%d",strNumberStock,arrTotalImages.count +1] ;
     }else{
-        strImageName =[NSString stringWithFormat:@"%@#_0%d",strNumberStock,arrTotalImages.count + 1] ;
+        strImageName =[NSString stringWithFormat:@"%@--0%d",strNumberStock,arrTotalImages.count + 1] ;
     }
     
     return strImageName;
@@ -106,9 +106,11 @@
         lblDone.text = Next;
     }else if (arrTotalImages.count == 1){
         lblDone.text = Next;
-    }else if (arrTotalImages.count >= 2){
-        lblDone.text = Done;
-    }
+    }else if (arrTotalImages.count == 2){
+        lblDone.text = Next;
+    }else if (arrTotalImages.count >= 3){
+    lblDone.text = Done;
+}
 }
 
 

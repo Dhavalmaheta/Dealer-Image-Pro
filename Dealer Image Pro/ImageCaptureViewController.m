@@ -84,7 +84,7 @@
     NSFileManager *manager = [NSFileManager defaultManager];
     NSArray *arrTotalImages =  [manager contentsOfDirectoryAtPath:strPath error:nil];
 
-    if (arrTotalImages.count >= 3) {
+    if (arrTotalImages.count >= 4) {
         [self.navigationController popToRootViewControllerAnimated:NO];
     }
 }
@@ -192,9 +192,9 @@
     
     NSString *strImageName;
     if([arrTotalImages count] > 9){
-        strImageName =[NSString stringWithFormat:@"%@#_%d",strStockNumber,arrTotalImages.count +1] ;
+        strImageName =[NSString stringWithFormat:@"%@--%d",strStockNumber,arrTotalImages.count +1] ;
     }else{
-        strImageName =[NSString stringWithFormat:@"%@_0%d",strStockNumber,arrTotalImages.count + 1] ;
+        strImageName =[NSString stringWithFormat:@"%@--0%d",strStockNumber,arrTotalImages.count + 1] ;
     }
     
     return strImageName;
@@ -210,14 +210,17 @@
     
     if (arrTotalImages.count == 0) {
         lblTitle.text = Hero;
-        imgFocusView.image = [UIImage imageNamed:@"Focus1.png"];
+        imgFocusView.image = [UIImage imageNamed:@"overlay1.png"];
     }else if (arrTotalImages.count == 1){
         lblTitle.text = Front;
-        imgFocusView.image = [UIImage imageNamed:@"Focus2.png"];
+        imgFocusView.image = [UIImage imageNamed:@"overlay2.png"];
     }else if (arrTotalImages.count == 2){
         lblTitle.text = Hero2;
-        imgFocusView.image = [UIImage imageNamed:@"Focus3.png"];
-    }
+        imgFocusView.image = [UIImage imageNamed:@"overlay3.png"];
+    }else if (arrTotalImages.count == 3){
+        lblTitle.text = Reverse Hero;
+        imgFocusView.image = [UIImage imageNamed:@"overlay4.png"];
+}
 }
 
 - (void)recorder:(SCRecorder *)recorder didCompleteSession:(SCRecordSession *)recordSession {

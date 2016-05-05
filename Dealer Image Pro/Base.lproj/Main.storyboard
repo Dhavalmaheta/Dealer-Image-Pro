@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ArZ-9i-EMx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ArZ-9i-EMx">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -248,21 +248,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="carbonFiber" translatesAutoresizingMaskIntoConstraints="NO" id="bW3-Oq-uBo">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TTR-11-bmv">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dV6-4g-ep0">
-                                <rect key="frame" x="230" y="601" width="196" height="85"/>
+                                <rect key="frame" x="216" y="675" width="196" height="85"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="goBack" translatesAutoresizingMaskIntoConstraints="NO" id="Liw-AE-2i2">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="goBack" translatesAutoresizingMaskIntoConstraints="NO" id="Liw-AE-2i2">
                                         <rect key="frame" x="74" y="8" width="48" height="38"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Reshoot" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="huX-uM-pzU">
                                         <rect key="frame" x="0.0" y="48" width="196" height="37"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="28"/>
+                                        <fontDescription key="fontDescription" name="GothamBook" family="Gotham Book" pointSize="29"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -275,16 +272,16 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="196" id="LUh-zO-K0q"/>
-                                    <constraint firstAttribute="height" constant="85" id="a6k-CY-0Se"/>
+                                    <constraint firstAttribute="width" constant="196" id="E10-g5-j2a"/>
+                                    <constraint firstAttribute="height" constant="85" id="Frk-6F-0lF"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Ac-7Q-jdX">
-                                <rect key="frame" x="593" y="601" width="196" height="85"/>
+                                <rect key="frame" x="612" y="675" width="196" height="85"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Next" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0dc-iI-yyQ">
                                         <rect key="frame" x="0.0" y="48" width="196" height="37"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="28"/>
+                                        <fontDescription key="fontDescription" name="GothamBook" family="Gotham Book" pointSize="28"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -300,24 +297,20 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="196" id="I08-3n-MKa"/>
-                                    <constraint firstAttribute="height" constant="85" id="hVs-bI-I4W"/>
+                                    <constraint firstAttribute="height" constant="85" id="1CL-p8-3gd"/>
+                                    <constraint firstAttribute="width" constant="196" id="Ofp-lZ-pJh"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="9Ac-7Q-jdX" secondAttribute="trailing" constant="235" id="3xb-9h-Ive"/>
-                            <constraint firstItem="BoK-rG-Mvq" firstAttribute="top" secondItem="bW3-Oq-uBo" secondAttribute="bottom" id="Jui-NV-cee"/>
-                            <constraint firstItem="BoK-rG-Mvq" firstAttribute="top" secondItem="dV6-4g-ep0" secondAttribute="bottom" constant="82" id="RRZ-4L-rd5"/>
-                            <constraint firstItem="bW3-Oq-uBo" firstAttribute="top" secondItem="len-mJ-EJv" secondAttribute="top" id="XLa-KH-yhx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9Ac-7Q-jdX" secondAttribute="trailing" constant="196" id="Ktq-GW-JIY"/>
+                            <constraint firstItem="BoK-rG-Mvq" firstAttribute="top" secondItem="9Ac-7Q-jdX" secondAttribute="bottom" constant="8" id="LV9-YL-ghI"/>
+                            <constraint firstItem="BoK-rG-Mvq" firstAttribute="top" secondItem="dV6-4g-ep0" secondAttribute="bottom" constant="8" id="Rcr-R2-Hnd"/>
+                            <constraint firstItem="dV6-4g-ep0" firstAttribute="leading" secondItem="len-mJ-EJv" secondAttribute="leadingMargin" constant="196" id="VmF-A6-02n"/>
                             <constraint firstAttribute="trailing" secondItem="TTR-11-bmv" secondAttribute="trailing" id="Yhk-su-9Ep"/>
                             <constraint firstItem="TTR-11-bmv" firstAttribute="leading" secondItem="len-mJ-EJv" secondAttribute="leading" id="Zyq-e5-SWV"/>
-                            <constraint firstItem="bW3-Oq-uBo" firstAttribute="leading" secondItem="len-mJ-EJv" secondAttribute="leading" id="j29-Jx-vmj"/>
                             <constraint firstItem="TTR-11-bmv" firstAttribute="top" secondItem="len-mJ-EJv" secondAttribute="top" id="kzR-AN-e8J"/>
-                            <constraint firstItem="BoK-rG-Mvq" firstAttribute="top" secondItem="9Ac-7Q-jdX" secondAttribute="bottom" constant="82" id="nmT-sy-ff1"/>
-                            <constraint firstAttribute="trailing" secondItem="bW3-Oq-uBo" secondAttribute="trailing" id="qGz-9g-uxI"/>
-                            <constraint firstItem="dV6-4g-ep0" firstAttribute="leading" secondItem="len-mJ-EJv" secondAttribute="leading" constant="230" id="reT-gR-Izf"/>
                             <constraint firstItem="BoK-rG-Mvq" firstAttribute="top" secondItem="TTR-11-bmv" secondAttribute="bottom" id="wH4-bn-GWb"/>
                         </constraints>
                     </view>
@@ -556,8 +549,8 @@
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Focus1" translatesAutoresizingMaskIntoConstraints="NO" id="3FJ-PO-hVn">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Focus1" translatesAutoresizingMaskIntoConstraints="NO" id="3FJ-PO-hVn">
+                                <rect key="frame" x="0.0" y="132" width="1024" height="548"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </imageView>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wLB-UC-UWF">
@@ -566,44 +559,20 @@
                                     <rect key="frame" x="0.0" y="0.0" width="1024" height="80"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lens:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4kG-2Y-ata">
-                                            <rect key="frame" x="22" y="21" width="191" height="37"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="191" id="1xS-h1-cKN"/>
-                                                <constraint firstAttribute="height" constant="37" id="60F-tl-Sdh"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" name="GothamBook" family="Gotham Book" pointSize="19"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shot Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VOg-qM-sZ7">
                                             <rect key="frame" x="367" y="21" width="290" height="37"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="290" id="9H1-lC-wMN"/>
                                                 <constraint firstAttribute="height" constant="37" id="qMk-ZV-lC0"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" name="GothamBook" family="Gotham Book" pointSize="19"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kma-MO-RjT">
-                                            <rect key="frame" x="718" y="21" width="290" height="37"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="290" id="919-lG-Py1"/>
-                                                <constraint firstAttribute="height" constant="37" id="OGk-d4-Oot"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" name="GothamBook" family="Gotham Book" pointSize="19"/>
+                                            <fontDescription key="fontDescription" name="GothamBook" family="Gotham Book" pointSize="26"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="VOg-qM-sZ7" firstAttribute="top" secondItem="luE-Kf-8Kb" secondAttribute="top" constant="21" id="CfQ-P3-bJl"/>
-                                        <constraint firstAttribute="trailing" secondItem="Kma-MO-RjT" secondAttribute="trailing" constant="16" id="GZT-MR-Krb"/>
-                                        <constraint firstItem="4kG-2Y-ata" firstAttribute="top" secondItem="luE-Kf-8Kb" secondAttribute="top" constant="21" id="Hw5-tI-LvM"/>
                                         <constraint firstItem="VOg-qM-sZ7" firstAttribute="centerX" secondItem="luE-Kf-8Kb" secondAttribute="centerX" id="LIr-q3-bKe"/>
-                                        <constraint firstItem="4kG-2Y-ata" firstAttribute="leading" secondItem="luE-Kf-8Kb" secondAttribute="leading" constant="22" id="mix-ri-PPz"/>
-                                        <constraint firstItem="Kma-MO-RjT" firstAttribute="top" secondItem="luE-Kf-8Kb" secondAttribute="top" constant="21" id="nJg-a4-dVP"/>
                                     </constraints>
                                 </view>
                                 <constraints>
@@ -629,24 +598,7 @@
                                                 </segue>
                                             </connections>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nVe-Zy-PhY">
-                                            <rect key="frame" x="383" y="25" width="259" height="30"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="259" id="2cG-UO-Jhb"/>
-                                                <constraint firstAttribute="height" constant="30" id="DLm-tb-NIQ"/>
-                                            </constraints>
-                                            <state key="normal" title="Temp back button">
-                                                <color key="titleColor" red="0.99215686270000003" green="0.90980392160000001" blue="0.01176470588" alpha="1" colorSpace="calibratedRGB"/>
-                                            </state>
-                                            <connections>
-                                                <action selector="onClickBackToMain:" destination="Day-LE-nZs" eventType="touchUpInside" id="Zdw-mh-fcf"/>
-                                            </connections>
-                                        </button>
                                     </subviews>
-                                    <constraints>
-                                        <constraint firstAttribute="bottom" secondItem="nVe-Zy-PhY" secondAttribute="bottom" constant="25" id="1fs-cy-KfU"/>
-                                        <constraint firstItem="nVe-Zy-PhY" firstAttribute="centerX" secondItem="ugS-pr-Z0Q" secondAttribute="centerX" id="GZf-pU-Q34"/>
-                                    </constraints>
                                 </view>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="u6r-Xo-BYK"/>
@@ -678,21 +630,21 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="3FJ-PO-hVn" secondAttribute="trailing" id="0h1-3v-cx5"/>
                             <constraint firstItem="BMl-a0-emN" firstAttribute="top" secondItem="udP-T8-Fp5" secondAttribute="bottom" constant="-44" id="25f-Yf-iNz"/>
                             <constraint firstItem="v2q-6D-NAQ" firstAttribute="top" secondItem="rrn-S1-JRj" secondAttribute="bottom" id="FQh-Qe-hul"/>
                             <constraint firstItem="BMl-a0-emN" firstAttribute="leading" secondItem="nio-vT-DSt" secondAttribute="leading" id="XND-WA-xAp"/>
                             <constraint firstAttribute="trailingMargin" secondItem="NbU-Cn-Adu" secondAttribute="trailing" constant="5" id="YrQ-ez-gFZ"/>
-                            <constraint firstItem="3FJ-PO-hVn" firstAttribute="top" secondItem="nio-vT-DSt" secondAttribute="top" id="c3V-Ps-E0u"/>
+                            <constraint firstItem="rrn-S1-JRj" firstAttribute="top" secondItem="3FJ-PO-hVn" secondAttribute="bottom" constant="8" id="aNh-Wq-AS4"/>
+                            <constraint firstItem="3FJ-PO-hVn" firstAttribute="top" secondItem="wLB-UC-UWF" secondAttribute="bottom" constant="8" id="ahO-ls-mff"/>
                             <constraint firstItem="shb-PS-kFW" firstAttribute="leading" secondItem="nio-vT-DSt" secondAttribute="leading" constant="50" id="fUN-4e-97S"/>
+                            <constraint firstItem="3FJ-PO-hVn" firstAttribute="leading" secondItem="nio-vT-DSt" secondAttribute="leadingMargin" constant="-20" id="g0K-4j-MJ7"/>
                             <constraint firstAttribute="trailing" secondItem="wLB-UC-UWF" secondAttribute="trailing" id="hpp-Fy-JNy"/>
                             <constraint firstItem="shb-PS-kFW" firstAttribute="top" secondItem="wLB-UC-UWF" secondAttribute="bottom" constant="20" id="l1m-BS-lD6"/>
                             <constraint firstAttribute="trailing" secondItem="rrn-S1-JRj" secondAttribute="trailing" id="mcf-zZ-9Jf"/>
                             <constraint firstItem="wLB-UC-UWF" firstAttribute="top" secondItem="udP-T8-Fp5" secondAttribute="bottom" id="mxU-mM-0kL"/>
                             <constraint firstItem="v2q-6D-NAQ" firstAttribute="top" secondItem="BMl-a0-emN" secondAttribute="bottom" id="pIn-4h-o9x"/>
                             <constraint firstItem="rrn-S1-JRj" firstAttribute="leading" secondItem="nio-vT-DSt" secondAttribute="leading" id="sVm-X5-brM"/>
-                            <constraint firstItem="v2q-6D-NAQ" firstAttribute="top" secondItem="3FJ-PO-hVn" secondAttribute="bottom" id="stq-6u-Z3C"/>
-                            <constraint firstItem="3FJ-PO-hVn" firstAttribute="leading" secondItem="nio-vT-DSt" secondAttribute="leading" id="vic-kg-TpO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3FJ-PO-hVn" secondAttribute="trailing" constant="-20" id="yMa-ix-dUz"/>
                             <constraint firstItem="wLB-UC-UWF" firstAttribute="leading" secondItem="nio-vT-DSt" secondAttribute="leading" id="z50-cQ-ins"/>
                             <constraint firstItem="NbU-Cn-Adu" firstAttribute="top" secondItem="wLB-UC-UWF" secondAttribute="bottom" constant="25" id="zG4-Rg-T6i"/>
                             <constraint firstAttribute="trailing" secondItem="BMl-a0-emN" secondAttribute="trailing" id="zHX-tu-Hzd"/>
