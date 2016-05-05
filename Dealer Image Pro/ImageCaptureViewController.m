@@ -218,7 +218,7 @@
         lblTitle.text = Hero2;
         imgFocusView.image = [UIImage imageNamed:@"overlay3.png"];
     }else if (arrTotalImages.count == 3){
-        lblTitle.text = Reverse Hero;
+        lblTitle.text = ReverseHero;
         imgFocusView.image = [UIImage imageNamed:@"overlay4.png"];
 }
 }

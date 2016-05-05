@@ -19,7 +19,7 @@
 #define Hero2  @"Hero 2"
 #define Next   @"Next"
 #define Done   @"Done"
-#define Reverse Hero @"Reverse Hero"
+#define ReverseHero @"Reverse Hero"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 {
