@@ -174,7 +174,7 @@
     for (int i=0 ; i< [arrTotalImages count]; i++) {
         
         NSString *strfileName = [arrTotalImages objectAtIndex:i];
-        NSString *destifilePath = [NSString stringWithFormat:@"/%@/%@" ,strDir ,strfileName];
+        NSString *destifilePath = [NSString stringWithFormat:@"/APP/%@/%@" ,strDir ,strfileName];
         
         NSString *sourcePath = [NSString stringWithFormat:@"%@/%@", strPath , strfileName];
         
@@ -244,6 +244,9 @@
     if([fileList count] == 0){
         UIAlertView *alert =[[UIAlertView alloc]initWithTitle:@"All Photos Uploaded successfully." message:nil delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alert show];
+        [[AppDelegate sharedAppDelegate]hideLoadingView];
+        [self getAllDirFromDocs];
+        
     }else{
         NSString *dirName = [fileList objectAtIndex:0];
         [self createFolderInDropboxWithName:dirName];
