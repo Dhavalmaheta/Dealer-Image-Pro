@@ -67,7 +67,7 @@
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Failed to save photo"
                                                         message:nil
                                                        delegate:self
-                                              cancelButtonTitle:@"OK"
+                                              cancelButtonTitle:@"Ok"
                                               otherButtonTitles:nil];
         [alert show];
     }
@@ -108,7 +108,21 @@
         lblDone.text = Next;
     }else if (arrTotalImages.count == 2){
         lblDone.text = Next;
-    }else if (arrTotalImages.count >= 3){
+    }else if (arrTotalImages.count == 3){
+        lblDone.text = Next;
+    }else if (arrTotalImages.count == 4){
+        lblDone.text = Next;
+    }else if (arrTotalImages.count == 5){
+        lblDone.text = Next;
+    }else if (arrTotalImages.count == 6){
+        lblDone.text = Next;
+    }else if (arrTotalImages.count == 7){
+        lblDone.text = Next;
+    }else if (arrTotalImages.count == 8){
+        lblDone.text = Next;
+    }else if (arrTotalImages.count == 9){
+        lblDone.text = Next;
+    }else if (arrTotalImages.count >= 10){
     lblDone.text = Done;
 }
 }

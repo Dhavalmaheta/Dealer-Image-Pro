@@ -20,6 +20,14 @@
 #define Next   @"Next"
 #define Done   @"Done"
 #define ReverseHero @"Reverse Hero"
+#define Rear @"Rear"
+#define Cockpit @"Cockpit"
+#define Console @"Console"
+#define Seats2 @"Seats 2"
+#define RearBadge1 @"Rear Badge 1"
+#define Wheel @"Wheel"
+#define Engine @"Engine"
+#define Keys @"Keys"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 {

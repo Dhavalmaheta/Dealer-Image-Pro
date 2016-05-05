@@ -69,7 +69,7 @@
         NSString *dirName = [fileList objectAtIndex:0];
         [self createFolderInDropboxWithName:dirName];
     }else{
-        UIAlertView *alert =[[UIAlertView alloc]initWithTitle:@"No folder Available to upload" message:nil delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+        UIAlertView *alert =[[UIAlertView alloc]initWithTitle:@"There are currently no vehicles available to upload" message:nil delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
         [alert show];
     }
 }
@@ -164,7 +164,7 @@
     NSArray *arrTotalImages =  [manager contentsOfDirectoryAtPath:strPath error:nil];
     
     if([arrTotalImages count] ==0 ){
-        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"No photo Available please capture photo." message:nil delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"One or more vehicles are missing photos" message:nil delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alert show];
         return;
     }
@@ -242,7 +242,7 @@
     [tvCars reloadData];
     
     if([fileList count] == 0){
-        UIAlertView *alert =[[UIAlertView alloc]initWithTitle:@"All Photos Uploaded successfully." message:nil delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        UIAlertView *alert =[[UIAlertView alloc]initWithTitle:@"All vehicles have been succesfully uploaded" message:nil delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alert show];
         [[AppDelegate sharedAppDelegate]hideLoadingView];
         [self getAllDirFromDocs];
@@ -274,7 +274,7 @@
         [[NSFileManager defaultManager] removeItemAtPath:path error:nil];
         
     }else{
-        UIAlertView *alert =[[UIAlertView alloc]initWithTitle:@"Fail To delete Directory." message:nil delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        UIAlertView *alert =[[UIAlertView alloc]initWithTitle:@"Failed to delete directory" message:nil delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alert show];
     }
 }

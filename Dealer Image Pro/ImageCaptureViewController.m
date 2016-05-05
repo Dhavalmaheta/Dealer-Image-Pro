@@ -84,7 +84,7 @@
     NSFileManager *manager = [NSFileManager defaultManager];
     NSArray *arrTotalImages =  [manager contentsOfDirectoryAtPath:strPath error:nil];
 
-    if (arrTotalImages.count >= 4) {
+    if (arrTotalImages.count >= 11) {
         [self.navigationController popToRootViewControllerAnimated:NO];
     }
 }
@@ -115,7 +115,7 @@
             
         } else {
             
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Failed to capture photo"
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Failed to capture photo. Please try again."
                                                             message:nil
                                                            delegate:self
                                                   cancelButtonTitle:@"OK"
@@ -215,10 +215,31 @@
         lblTitle.text = Front;
         imgFocusView.image = [UIImage imageNamed:@"overlay2.png"];
     }else if (arrTotalImages.count == 2){
-        lblTitle.text = Hero2;
+        lblTitle.text = Rear;
         imgFocusView.image = [UIImage imageNamed:@"overlay3.png"];
     }else if (arrTotalImages.count == 3){
+        lblTitle.text = Cockpit;
+        imgFocusView.image = [UIImage imageNamed:@"overlay4.png"];
+    }else if (arrTotalImages.count == 4){
+        lblTitle.text = Console;
+        imgFocusView.image = [UIImage imageNamed:@"overlay2.png"];
+    }else if (arrTotalImages.count == 5){
+        lblTitle.text = Seats2;
+        imgFocusView.image = [UIImage imageNamed:@"overlay3.png"];
+    }else if (arrTotalImages.count == 6){
+        lblTitle.text = RearBadge1;
+        imgFocusView.image = [UIImage imageNamed:@"overlay4.png"];
+    }else if (arrTotalImages.count == 7){
+        lblTitle.text = Wheel;
+        imgFocusView.image = [UIImage imageNamed:@"overlay2.png"];
+    }else if (arrTotalImages.count == 8){
+        lblTitle.text = Engine;
+        imgFocusView.image = [UIImage imageNamed:@"overlay3.png"];
+    }else if (arrTotalImages.count == 9){
         lblTitle.text = ReverseHero;
+        imgFocusView.image = [UIImage imageNamed:@"overlay4.png"];
+    }else if (arrTotalImages.count == 10){
+        lblTitle.text = Keys;
         imgFocusView.image = [UIImage imageNamed:@"overlay4.png"];
 }
 }
