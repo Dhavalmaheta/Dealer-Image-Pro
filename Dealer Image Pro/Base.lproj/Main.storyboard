@@ -179,7 +179,7 @@
                                                         <action selector="onClickDeleteDir:" destination="fCF-b5-eJU" eventType="touchUpInside" id="qFj-81-QFf"/>
                                                     </connections>
                                                 </button>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="detailArrow" translatesAutoresizingMaskIntoConstraints="NO" id="et3-aw-cVI">
+                                                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="detailArrow" translatesAutoresizingMaskIntoConstraints="NO" id="et3-aw-cVI">
                                                     <rect key="frame" x="980" y="15" width="20" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="20" id="aie-2P-7y3"/>
@@ -187,6 +187,7 @@
                                                     </constraints>
                                                 </imageView>
                                             </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstItem="TRx-tJ-gIl" firstAttribute="top" secondItem="OSg-5I-3uM" secondAttribute="topMargin" constant="2" id="SGO-48-Lqq"/>
                                                 <constraint firstItem="et3-aw-cVI" firstAttribute="leading" secondItem="TRx-tJ-gIl" secondAttribute="trailing" constant="37" id="Uil-8r-19n"/>
