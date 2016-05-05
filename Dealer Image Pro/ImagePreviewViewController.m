@@ -86,7 +86,7 @@
     NSLog(@"ALL IMAGES %@", arrTotalImages);
     
     NSString *strImageName;
-    if([arrTotalImages count] > 9){
+    if([arrTotalImages count] > 8){
         strImageName =[NSString stringWithFormat:@"%@--%d",strNumberStock,arrTotalImages.count +1] ;
     }else{
         strImageName =[NSString stringWithFormat:@"%@--0%d",strNumberStock,arrTotalImages.count + 1] ;
