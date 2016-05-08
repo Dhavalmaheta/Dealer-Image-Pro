@@ -22,7 +22,9 @@
     UIImage *_photo;
     SCRecordSession *_recordSession;
     UIImageView *_ghostImageView;
-    
+    IBOutlet UIVisualEffectView *darkBlur;
+    IBOutlet UIButton *doneButton;
+    IBOutlet UIImageView *exampleImage;
     IBOutlet UILabel *lblTitle;
     IBOutlet UIImageView *imgFocusView;
     

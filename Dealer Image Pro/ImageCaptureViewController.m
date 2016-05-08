@@ -102,6 +102,16 @@
 //    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
+- (IBAction)exampleButton:(id)sender {
+    exampleImage.hidden = false;
+    darkBlur.hidden = false;
+    doneButton.hidden = false;
+}
+- (IBAction)done:(id)sender {
+    exampleImage.hidden = true;
+    darkBlur.hidden = true;
+    doneButton.hidden = true;
+}
 
 - (IBAction)capturePhoto:(id)sender {
     [_recorder capturePhoto:^(NSError *error, UIImage *image) {
@@ -211,36 +221,47 @@
     if (arrTotalImages.count == 0) {
         lblTitle.text = Hero;
         imgFocusView.image = [UIImage imageNamed:@"overlay1.png"];
+        exampleImage.image = [UIImage imageNamed:@"example1.png"];
     }else if (arrTotalImages.count == 1){
         lblTitle.text = Front;
         imgFocusView.image = [UIImage imageNamed:@"overlay2.png"];
+        exampleImage.image = [UIImage imageNamed:@"example2.png"];
     }else if (arrTotalImages.count == 2){
         lblTitle.text = Rear;
         imgFocusView.image = [UIImage imageNamed:@"overlay3.png"];
+        exampleImage.image = [UIImage imageNamed:@"example3.png"];
     }else if (arrTotalImages.count == 3){
         lblTitle.text = Cockpit;
         imgFocusView.image = [UIImage imageNamed:@"overlay4.png"];
+        exampleImage.image = [UIImage imageNamed:@"example4.png"];
     }else if (arrTotalImages.count == 4){
         lblTitle.text = Console;
         imgFocusView.image = [UIImage imageNamed:@"overlay2.png"];
+        exampleImage.image = [UIImage imageNamed:@"example5.png"];
     }else if (arrTotalImages.count == 5){
         lblTitle.text = Seats2;
         imgFocusView.image = [UIImage imageNamed:@"overlay3.png"];
+        exampleImage.image = [UIImage imageNamed:@"example6.png"];
     }else if (arrTotalImages.count == 6){
         lblTitle.text = RearBadge1;
         imgFocusView.image = [UIImage imageNamed:@"overlay4.png"];
+        exampleImage.image = [UIImage imageNamed:@"example7.png"];
     }else if (arrTotalImages.count == 7){
         lblTitle.text = Wheel;
         imgFocusView.image = [UIImage imageNamed:@"overlay2.png"];
+        exampleImage.image = [UIImage imageNamed:@"example8.png"];
     }else if (arrTotalImages.count == 8){
         lblTitle.text = Engine;
         imgFocusView.image = [UIImage imageNamed:@"overlay3.png"];
+        exampleImage.image = [UIImage imageNamed:@"example9.png"];
     }else if (arrTotalImages.count == 9){
         lblTitle.text = ReverseHero;
         imgFocusView.image = [UIImage imageNamed:@"overlay4.png"];
+        exampleImage.image = [UIImage imageNamed:@"example10.png"];
     }else if (arrTotalImages.count == 10){
         lblTitle.text = Keys;
         imgFocusView.image = [UIImage imageNamed:@"overlay4.png"];
+        exampleImage.image = [UIImage imageNamed:@"example11.png"];
 }
 }
 

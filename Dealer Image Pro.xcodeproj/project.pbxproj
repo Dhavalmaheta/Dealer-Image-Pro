@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		142388E01CDB6B1F00D87505 /* DropboxSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 282EFC8D1CD45AC200E29E74 /* DropboxSDK.framework */; };
+		142388E31CDEC60700D87505 /* DropboxSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 282EFC8D1CD45AC200E29E74 /* DropboxSDK.framework */; };
 		146769061CC2732500D3D62F /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 146769051CC2732500D3D62F /* MainController.m */; };
 		14A68E991CC17C71008671DB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A68E981CC17C71008671DB /* main.m */; };
 		14A68E9C1CC17C71008671DB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A68E9B1CC17C71008671DB /* AppDelegate.m */; };
@@ -190,7 +190,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				142388E01CDB6B1F00D87505 /* DropboxSDK.framework in Frameworks */,
+				142388E31CDEC60700D87505 /* DropboxSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -799,6 +799,15 @@
 					"$(PROJECT_DIR)/Dealer",
 					Image,
 					Pro/frmwork,
+					"$(PROJECT_DIR)/Dealer",
+					Image,
+					Pro/frmwork,
+					"$(PROJECT_DIR)/Dealer",
+					Image,
+					Pro/frmwork,
+					"$(PROJECT_DIR)/Dealer",
+					Image,
+					Pro/frmwork,
 				);
 				GCC_PREFIX_HEADER = "Dealer Image Pro/DealerImagePrefixHeader.pch";
 				INFOPLIST_FILE = "Dealer Image Pro/Info.plist";
@@ -819,6 +828,15 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(PROJECT_DIR)/Dealer",
+					Image,
+					Pro/frmwork,
+					"$(PROJECT_DIR)/Dealer",
+					Image,
+					Pro/frmwork,
+					"$(PROJECT_DIR)/Dealer",
+					Image,
+					Pro/frmwork,
 					"$(PROJECT_DIR)/Dealer",
 					Image,
 					Pro/frmwork,
