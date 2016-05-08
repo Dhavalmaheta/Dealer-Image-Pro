@@ -20,7 +20,6 @@
             <string>GothamBook</string>
             <string>GothamBook</string>
             <string>GothamBook</string>
-            <string>GothamBook</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -665,33 +664,37 @@
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="h2Z-4l-Npp">
                                     <rect key="frame" x="0.0" y="0.0" width="1024" height="724"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kgi-OJ-SXL">
+                                            <rect key="frame" x="924" y="0.0" width="100" height="100"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="100" id="tTr-tm-oVg"/>
+                                                <constraint firstAttribute="width" constant="100" id="ynb-GD-7E8"/>
+                                            </constraints>
+                                            <inset key="contentEdgeInsets" minX="20" minY="20" maxX="20" maxY="20"/>
+                                            <state key="normal" image="circle2">
+                                                <color key="titleColor" red="0.99215686270000003" green="0.90980392160000001" blue="0.01176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="done:" destination="Day-LE-nZs" eventType="touchUpInside" id="Jqy-o6-He9"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Kgi-OJ-SXL" firstAttribute="top" secondItem="h2Z-4l-Npp" secondAttribute="top" id="E2P-1x-yHU"/>
+                                        <constraint firstAttribute="trailing" secondItem="Kgi-OJ-SXL" secondAttribute="trailing" id="Wod-vX-D4E"/>
+                                    </constraints>
                                 </view>
                                 <blurEffect style="dark"/>
                             </visualEffectView>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Gear_icon" translatesAutoresizingMaskIntoConstraints="NO" id="CdX-Ni-J0n">
                                 <rect key="frame" x="20" y="144" width="984" height="524"/>
                             </imageView>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kgi-OJ-SXL">
-                                <rect key="frame" x="874" y="708" width="125" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="125" id="jvM-2A-ogD"/>
-                                    <constraint firstAttribute="height" constant="40" id="tf1-BL-wSn"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="GothamBook" family="Gotham Book" pointSize="26"/>
-                                <state key="normal" title="Done">
-                                    <color key="titleColor" red="0.99215686270000003" green="0.90980392160000001" blue="0.01176470588" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="done:" destination="Day-LE-nZs" eventType="touchUpInside" id="Jqy-o6-He9"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="BMl-a0-emN" firstAttribute="top" secondItem="udP-T8-Fp5" secondAttribute="bottom" constant="-44" id="25f-Yf-iNz"/>
                             <constraint firstItem="vPt-wU-d7q" firstAttribute="top" secondItem="udP-T8-Fp5" secondAttribute="bottom" id="2W7-8U-tw8"/>
-                            <constraint firstItem="v2q-6D-NAQ" firstAttribute="top" secondItem="Kgi-OJ-SXL" secondAttribute="bottom" constant="20" id="4EQ-Ap-nsN"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Kgi-OJ-SXL" secondAttribute="trailing" constant="5" id="AOd-aL-E58"/>
                             <constraint firstItem="v2q-6D-NAQ" firstAttribute="top" secondItem="rrn-S1-JRj" secondAttribute="bottom" id="FQh-Qe-hul"/>
                             <constraint firstItem="CdX-Ni-J0n" firstAttribute="leading" secondItem="nio-vT-DSt" secondAttribute="leadingMargin" id="FuK-Ip-Dxt"/>
                             <constraint firstItem="v2q-6D-NAQ" firstAttribute="top" secondItem="vPt-wU-d7q" secondAttribute="bottom" id="JBl-KQ-z5D"/>
@@ -794,6 +797,7 @@
         <image name="backArrow" width="320" height="320"/>
         <image name="capture" width="526" height="526"/>
         <image name="carbonFiber" width="2400" height="2400"/>
+        <image name="circle2" width="100" height="100"/>
         <image name="darkcarbonFiber" width="2400" height="2400"/>
         <image name="detailArrow" width="20" height="20"/>
         <image name="goBack" width="512" height="512"/>

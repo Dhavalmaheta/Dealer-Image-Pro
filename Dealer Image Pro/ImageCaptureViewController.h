@@ -27,6 +27,7 @@
     IBOutlet UIImageView *exampleImage;
     IBOutlet UILabel *lblTitle;
     IBOutlet UIImageView *imgFocusView;
+
     
     IBOutlet UIButton *btnCapture;
 }
