@@ -24,6 +24,7 @@
     UIAlertView *deleteAlert;
 }
 @property (nonatomic,strong) DropboxManager *objManager;
+@property (weak, nonatomic) IBOutlet UIButton *uploadIcon;
 
 
 @end

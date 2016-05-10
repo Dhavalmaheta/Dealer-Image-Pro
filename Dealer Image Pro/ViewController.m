@@ -36,6 +36,7 @@
     // [objManager logoutFromDropbox];
 }
 
+
 -(void)viewWillAppear:(BOOL)animated{
     
     [super viewWillAppear:animated];
@@ -62,6 +63,8 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
 
 - (IBAction)uploadButton:(id)sender {
     
