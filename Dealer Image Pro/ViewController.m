@@ -64,6 +64,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)hideUploadSuccess:(id)sender {
+    uploadSuccessButton.hidden = true;
+    uploadSuccessNote.hidden = true;
+}
 
 - (IBAction)hideUploadHelp:(id)sender {
     uploadImageBlur.hidden = true;
@@ -227,12 +231,14 @@
 {
     NSLog(@"UPLOAD FILE  %@", uploadFile);
     
+    
     if([uploadArray count] > 0){
         [uploadArray removeObject:uploadFile];
     }
     
     if([uploadArray count] ==0){
-        
+        uploadSuccessButton.hidden = false;
+        uploadSuccessNote.hidden = false;
         [[AppDelegate sharedAppDelegate]hideLoadingView];
         [self removeUploadedDir:uploadFile];
         
@@ -248,8 +254,7 @@
     [tvCars reloadData];
     
     if([fileList count] == 0){
-        UIAlertView *alert =[[UIAlertView alloc]initWithTitle:@"All vehicles have been succesfully uploaded" message:nil delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
-        [alert show];
+        
         [[AppDelegate sharedAppDelegate]hideLoadingView];
         [self getAllDirFromDocs];
         

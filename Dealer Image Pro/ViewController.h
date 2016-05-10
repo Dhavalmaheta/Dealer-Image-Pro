@@ -15,6 +15,8 @@
 @interface ViewController : UIViewController<UITableViewDelegate,UITableViewDataSource , DropBoxDelegate , CarCellDelegate , UIAlertViewDelegate>
 {
     
+    __weak IBOutlet UILabel *uploadSuccessNote;
+    __weak IBOutlet UIButton *uploadSuccessButton;
     __weak IBOutlet UIVisualEffectView *uploadImageBlur;
     IBOutlet UITableView *tvCars;
     DBRestClient* restClient;
