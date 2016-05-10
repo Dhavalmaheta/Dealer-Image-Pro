@@ -263,12 +263,12 @@
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Oops! There are currently no vehicles available to upload. To begin shooting, press &quot;Add Vehicle&quot;" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7XN-oy-vWl">
-                                            <rect key="frame" x="414" y="122" width="356" height="189"/>
+                                            <rect key="frame" x="447" y="64" width="356" height="192"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                             <color key="textColor" red="0.99607849120000003" green="0.99607849120000003" blue="0.99215692280000001" alpha="1" colorSpace="deviceRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="xnv-fZ-7VK">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="arrow-left" translatesAutoresizingMaskIntoConstraints="NO" id="xnv-fZ-7VK">
                                             <rect key="frame" x="343" y="119" width="69" height="69"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add Vehicle" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Rf-ta-8Nr">
@@ -299,7 +299,7 @@
                                 <blurEffect style="dark"/>
                             </visualEffectView>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BOp-Nd-gSo">
-                                <rect key="frame" x="0.0" y="44" width="1024" height="724"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <color key="backgroundColor" red="0.12192448518452591" green="0.8704032512626263" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="GothamBook" family="Gotham Book" pointSize="99"/>
                                 <color key="tintColor" red="0.99607849120000003" green="0.99607849120000003" blue="0.99215692280000001" alpha="1" colorSpace="deviceRGB"/>
@@ -324,23 +324,23 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="O2c-Cc-hgH" secondAttribute="bottom" id="6ip-V7-4zL"/>
                             <constraint firstItem="MHF-nH-H8n" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="9xX-y6-Xcc"/>
                             <constraint firstAttribute="trailing" secondItem="U9d-rg-FPG" secondAttribute="trailing" id="AcV-8R-idR"/>
-                            <constraint firstAttribute="trailing" secondItem="BOp-Nd-gSo" secondAttribute="trailing" id="CRr-et-gUr"/>
+                            <constraint firstItem="BOp-Nd-gSo" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Ai0-Pg-pjY"/>
                             <constraint firstItem="aqf-dw-y1Z" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="CVS-4c-9J6"/>
                             <constraint firstItem="Omw-8V-rvW" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="DTb-gf-Qac"/>
                             <constraint firstItem="U9d-rg-FPG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Jp6-aP-idX"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="MHF-nH-H8n" secondAttribute="bottom" id="M3Q-0s-yZg"/>
-                            <constraint firstItem="BOp-Nd-gSo" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="O18-vk-PfN"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="BOp-Nd-gSo" secondAttribute="bottom" id="T29-cE-4o7"/>
                             <constraint firstItem="O2c-Cc-hgH" firstAttribute="leading" secondItem="aqf-dw-y1Z" secondAttribute="trailing" id="VfO-Qc-1B0"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="BOp-Nd-gSo" secondAttribute="bottom" id="WQv-ru-CMJ"/>
                             <constraint firstItem="aqf-dw-y1Z" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Xum-6F-eGN"/>
                             <constraint firstAttribute="trailing" secondItem="Omw-8V-rvW" secondAttribute="trailing" id="Y2X-fW-dpt"/>
-                            <constraint firstItem="BOp-Nd-gSo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Yku-en-cWL"/>
                             <constraint firstItem="MHF-nH-H8n" firstAttribute="leading" secondItem="aqf-dw-y1Z" secondAttribute="trailing" id="aPc-fS-mVY"/>
                             <constraint firstItem="O2c-Cc-hgH" firstAttribute="top" secondItem="Omw-8V-rvW" secondAttribute="bottom" id="dNp-CV-AaF"/>
                             <constraint firstItem="BPI-HN-ejO" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="55" id="dTj-bc-eJl"/>
                             <constraint firstItem="BPI-HN-ejO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kFW-Hg-dsv"/>
+                            <constraint firstAttribute="trailing" secondItem="BOp-Nd-gSo" secondAttribute="trailing" id="lLY-G5-fV6"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="U9d-rg-FPG" secondAttribute="bottom" id="pIJ-nu-fuR"/>
                             <constraint firstItem="Omw-8V-rvW" firstAttribute="leading" secondItem="aqf-dw-y1Z" secondAttribute="trailing" id="pgY-n1-xAk"/>
+                            <constraint firstItem="BOp-Nd-gSo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="qxy-U5-hju"/>
                             <constraint firstItem="U9d-rg-FPG" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="tds-uI-L1u"/>
                         </constraints>
                     </view>
@@ -349,6 +349,7 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
+                        <outlet property="arrow" destination="xnv-fZ-7VK" id="uah-Sq-Axt"/>
                         <outlet property="tvCars" destination="O2c-Cc-hgH" id="ig3-Ca-oar"/>
                         <outlet property="uploadIcon" destination="m9w-Jg-bC0" id="wWi-hp-HBC"/>
                         <outlet property="uploadImageBlur" destination="U9d-rg-FPG" id="78x-Dg-0tO"/>
@@ -935,7 +936,7 @@
         <image name="Focus1" width="512" height="512"/>
         <image name="Gear_icon" width="1334" height="1343"/>
         <image name="User-Interface-Plus-icon copy" width="164" height="164"/>
-        <image name="back" width="128" height="128"/>
+        <image name="arrow-left" width="188" height="188"/>
         <image name="backArrow" width="320" height="320"/>
         <image name="capture" width="526" height="526"/>
         <image name="circle2" width="100" height="100"/>

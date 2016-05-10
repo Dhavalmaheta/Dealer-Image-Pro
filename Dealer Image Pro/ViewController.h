@@ -16,6 +16,8 @@
 {
     
 
+    __weak IBOutlet UIImageView *arrow;
+
     __weak IBOutlet UILabel *uploadSuccessNote;
     __weak IBOutlet UIButton *uploadSuccessButton;
     __weak IBOutlet UIVisualEffectView *uploadImageBlur;

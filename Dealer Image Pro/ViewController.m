@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 #import "ImageCaptureViewController.h"
-
+#import <QuartzCore/QuartzCore.h>
 #import <DropboxSDK/DropboxSDK.h>
 #import <stdlib.h>
 
@@ -34,6 +34,60 @@
     [[self navigationController] setNavigationBarHidden:YES animated:NO];
     
     // [objManager logoutFromDropbox];
+    
+// Animation sequence using quartz framework
+    
+//    self->arrow.center = CGPointMake(160, 240);
+//    
+//    CAKeyframeAnimation *animation;
+//    
+//    animation = [CAKeyframeAnimation animationWithKeyPath:@"position.x"];
+//    animation.duration = 3.0f;
+//    animation.repeatCount = 1000000;
+//    animation.values = [NSArray arrayWithObjects:
+//                        [NSNumber numberWithFloat:160.0f],
+//                        [NSNumber numberWithFloat:320.0f],
+//                        [NSNumber numberWithFloat:160.0f],
+//                        [NSNumber numberWithFloat:0.0f],
+//                        [NSNumber numberWithFloat:160.0f], nil];
+//    animation.keyTimes = [NSArray arrayWithObjects:
+//                          [NSNumber numberWithFloat:0.0],
+//                          [NSNumber numberWithFloat:0.25],
+//                          [NSNumber numberWithFloat:.5],
+//                          [NSNumber numberWithFloat:.75],
+//                          [NSNumber numberWithFloat:1.0], nil];
+//    
+//    animation.removedOnCompletion = NO;
+    
+//    [self->arrow.layer addAnimation:animation forKey:nil];
+    
+    
+    self->arrow.center = CGPointMake(160, 240);
+    
+    
+    CAKeyframeAnimation *animation;
+    
+    animation = [CAKeyframeAnimation animationWithKeyPath:@"position.x"];
+    animation.duration = 1.5f;
+    animation.repeatCount = 1000000;
+    animation.values = [NSArray arrayWithObjects:
+                        [NSNumber numberWithFloat:360.0f],
+                        [NSNumber numberWithFloat:390.0f],
+                        [NSNumber numberWithFloat:360.0f],
+                        [NSNumber numberWithFloat:330.0f],
+                        [NSNumber numberWithFloat:360.0f], nil];
+    animation.keyTimes = [NSArray arrayWithObjects:
+                          [NSNumber numberWithFloat:0.0],
+                          [NSNumber numberWithFloat:0.25],
+                          [NSNumber numberWithFloat:.5],
+                          [NSNumber numberWithFloat:.75],
+                          [NSNumber numberWithFloat:1.0], nil];
+    
+    animation.removedOnCompletion = NO;
+    
+    [self->arrow.layer addAnimation:animation forKey:nil];
+    
+    
 }
 
 
@@ -80,6 +134,7 @@
         [self createFolderInDropboxWithName:dirName];
     }else{
         uploadImageBlur.hidden = false;
+        
         
     }
 }

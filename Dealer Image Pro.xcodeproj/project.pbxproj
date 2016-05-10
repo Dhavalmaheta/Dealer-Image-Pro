@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		146769061CC2732500D3D62F /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 146769051CC2732500D3D62F /* MainController.m */; };
 		1468BF311CE1E57000C32F87 /* DropboxSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 282EFC8D1CD45AC200E29E74 /* DropboxSDK.framework */; };
+		1468BF331CE2287A00C32F87 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1468BF321CE2287A00C32F87 /* QuartzCore.framework */; };
 		14A68E991CC17C71008671DB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A68E981CC17C71008671DB /* main.m */; };
 		14A68E9C1CC17C71008671DB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A68E9B1CC17C71008671DB /* AppDelegate.m */; };
 		14A68E9F1CC17C71008671DB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A68E9E1CC17C71008671DB /* ViewController.m */; };
@@ -82,6 +83,7 @@
 /* Begin PBXFileReference section */
 		146769041CC2732500D3D62F /* MainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainController.h; sourceTree = "<group>"; };
 		146769051CC2732500D3D62F /* MainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainController.m; sourceTree = "<group>"; };
+		1468BF321CE2287A00C32F87 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		14A68E941CC17C71008671DB /* Dealer Image Pro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dealer Image Pro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		14A68E981CC17C71008671DB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		14A68E9A1CC17C71008671DB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1468BF331CE2287A00C32F87 /* QuartzCore.framework in Frameworks */,
 				1468BF311CE1E57000C32F87 /* DropboxSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -214,6 +217,7 @@
 		14A68E8B1CC17C71008671DB = {
 			isa = PBXGroup;
 			children = (
+				1468BF321CE2287A00C32F87 /* QuartzCore.framework */,
 				14A68E961CC17C71008671DB /* Dealer Image Pro */,
 				14A68EB31CC17C71008671DB /* Dealer Image ProTests */,
 				14A68EBE1CC17C71008671DB /* Dealer Image ProUITests */,
