@@ -65,6 +65,9 @@
 }
 
 
+- (IBAction)hideUploadHelp:(id)sender {
+    uploadImageBlur.hidden = true;
+}
 
 - (IBAction)uploadButton:(id)sender {
     
@@ -72,8 +75,8 @@
         NSString *dirName = [fileList objectAtIndex:0];
         [self createFolderInDropboxWithName:dirName];
     }else{
-        UIAlertView *alert =[[UIAlertView alloc]initWithTitle:@"There are currently no vehicles available to upload" message:nil delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
-        [alert show];
+        uploadImageBlur.hidden = false;
+        
     }
 }
 

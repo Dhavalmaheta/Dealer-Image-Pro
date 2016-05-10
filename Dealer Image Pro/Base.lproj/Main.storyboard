@@ -25,6 +25,7 @@
             <string>GothamBook</string>
             <string>GothamBook</string>
             <string>GothamBook</string>
+            <string>GothamBook</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -135,7 +136,7 @@
                                                         <action selector="onClickDeleteDir:" destination="fCF-b5-eJU" eventType="touchUpInside" id="qFj-81-QFf"/>
                                                     </connections>
                                                 </button>
-                                                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="detailArrow" translatesAutoresizingMaskIntoConstraints="NO" id="et3-aw-cVI">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="detailArrow" translatesAutoresizingMaskIntoConstraints="NO" id="et3-aw-cVI">
                                                     <rect key="frame" x="537" y="15" width="20" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20" id="l4r-PR-cOW"/>
@@ -182,14 +183,6 @@
                                     <rect key="frame" x="0.0" y="0.0" width="444" height="768"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6NB-kd-ZIP">
-                                            <rect key="frame" x="161" y="104" width="120" height="159"/>
-                                            <inset key="contentEdgeInsets" minX="12" minY="12" maxX="12" maxY="52"/>
-                                            <state key="normal" image="User-Interface-Plus-icon copy"/>
-                                            <connections>
-                                                <segue destination="Zo3-Ta-6KX" kind="show" id="1wV-MA-CSs"/>
-                                            </connections>
-                                        </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8xz-6D-E2t">
                                             <rect key="frame" x="8" y="698" width="62" height="62"/>
                                             <constraints>
@@ -204,12 +197,6 @@
                                                 </segue>
                                             </connections>
                                         </button>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add Vehicle" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pzx-1U-0O7">
-                                            <rect key="frame" x="118" y="223" width="207" height="40"/>
-                                            <fontDescription key="fontDescription" name="GothamBook" family="Gotham Book" pointSize="28"/>
-                                            <color key="textColor" red="0.99215686270000003" green="0.90980392160000001" blue="0.01176470588" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Upload Vehicles" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SD4-PZ-ygY">
                                             <rect key="frame" x="79" y="455" width="285" height="40"/>
                                             <fontDescription key="fontDescription" name="GothamBook" family="Gotham Book" pointSize="28"/>
@@ -224,6 +211,28 @@
                                                 <action selector="uploadButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tOU-Zw-fK3"/>
                                             </connections>
                                         </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add Vehicle" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pzx-1U-0O7">
+                                            <rect key="frame" x="118" y="205" width="207" height="40"/>
+                                            <fontDescription key="fontDescription" name="GothamBook" family="Gotham Book" pointSize="28"/>
+                                            <color key="textColor" red="0.99215686270000003" green="0.90980392160000001" blue="0.01176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6NB-kd-ZIP">
+                                            <rect key="frame" x="162" y="86" width="120" height="159"/>
+                                            <inset key="contentEdgeInsets" minX="12" minY="12" maxX="12" maxY="52"/>
+                                            <state key="normal" image="User-Interface-Plus-icon copy"/>
+                                            <connections>
+                                                <segue destination="Zo3-Ta-6KX" kind="show" id="1wV-MA-CSs"/>
+                                            </connections>
+                                        </button>
+                                        <visualEffectView opaque="NO" alpha="0.34999999999999998" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hoq-9h-9Br">
+                                            <rect key="frame" x="52" y="310" width="340" height="1"/>
+                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="eUZ-XS-Ml3">
+                                                <rect key="frame" x="0.0" y="0.0" width="340" height="1"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            </view>
+                                            <blurEffect style="light"/>
+                                        </visualEffectView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="8xz-6D-E2t" firstAttribute="leading" secondItem="Wmk-5Q-xKC" secondAttribute="leading" constant="8" id="5De-6r-psw"/>
@@ -235,13 +244,47 @@
                                 </constraints>
                                 <blurEffect style="dark"/>
                             </visualEffectView>
-                            <visualEffectView opaque="NO" alpha="0.34999999999999998" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hoq-9h-9Br">
-                                <rect key="frame" x="52" y="316" width="340" height="1"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="eUZ-XS-Ml3">
-                                    <rect key="frame" x="0.0" y="0.0" width="340" height="1"/>
+                            <visualEffectView hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U9d-rg-FPG">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="h7v-sR-kOz">
+                                    <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Oops! There are currently no vehicles available to upload. To begin shooting, press &quot;Add Vehicle&quot;" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7XN-oy-vWl">
+                                            <rect key="frame" x="414" y="122" width="356" height="189"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                            <color key="textColor" red="0.99607849120000003" green="0.99607849120000003" blue="0.99215692280000001" alpha="1" colorSpace="deviceRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="xnv-fZ-7VK">
+                                            <rect key="frame" x="343" y="119" width="69" height="69"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add Vehicle" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Rf-ta-8Nr">
+                                            <rect key="frame" x="118" y="205" width="207" height="40"/>
+                                            <fontDescription key="fontDescription" name="GothamBook" family="Gotham Book" pointSize="28"/>
+                                            <color key="textColor" red="0.99215686270000003" green="0.90980392160000001" blue="0.01176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BGh-Gv-wV4">
+                                            <rect key="frame" x="162" y="86" width="120" height="159"/>
+                                            <inset key="contentEdgeInsets" minX="12" minY="12" maxX="12" maxY="52"/>
+                                            <state key="normal" image="User-Interface-Plus-icon copy"/>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="78p-kJ-bRC">
+                                            <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                            <connections>
+                                                <action selector="hideUploadHelp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6mk-Ss-NSP"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="78p-kJ-bRC" firstAttribute="leading" secondItem="h7v-sR-kOz" secondAttribute="leading" id="ILn-PP-PtY"/>
+                                        <constraint firstAttribute="trailing" secondItem="78p-kJ-bRC" secondAttribute="trailing" id="Oof-lY-TWA"/>
+                                        <constraint firstAttribute="bottom" secondItem="78p-kJ-bRC" secondAttribute="bottom" id="gIA-ZE-ByH"/>
+                                        <constraint firstItem="78p-kJ-bRC" firstAttribute="top" secondItem="h7v-sR-kOz" secondAttribute="top" id="n1O-2i-x7B"/>
+                                    </constraints>
                                 </view>
-                                <blurEffect style="light"/>
+                                <blurEffect style="dark"/>
                             </visualEffectView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -250,8 +293,10 @@
                             <constraint firstAttribute="trailing" secondItem="O2c-Cc-hgH" secondAttribute="trailing" id="5dB-VX-rPN"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="O2c-Cc-hgH" secondAttribute="bottom" id="6ip-V7-4zL"/>
                             <constraint firstItem="MHF-nH-H8n" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="9xX-y6-Xcc"/>
+                            <constraint firstAttribute="trailing" secondItem="U9d-rg-FPG" secondAttribute="trailing" id="AcV-8R-idR"/>
                             <constraint firstItem="aqf-dw-y1Z" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="CVS-4c-9J6"/>
                             <constraint firstItem="Omw-8V-rvW" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="DTb-gf-Qac"/>
+                            <constraint firstItem="U9d-rg-FPG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Jp6-aP-idX"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="MHF-nH-H8n" secondAttribute="bottom" id="M3Q-0s-yZg"/>
                             <constraint firstItem="O2c-Cc-hgH" firstAttribute="leading" secondItem="aqf-dw-y1Z" secondAttribute="trailing" id="VfO-Qc-1B0"/>
                             <constraint firstItem="aqf-dw-y1Z" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Xum-6F-eGN"/>
@@ -262,7 +307,9 @@
                             <constraint firstItem="CVs-7U-PeD" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="czM-EP-7S6"/>
                             <constraint firstItem="O2c-Cc-hgH" firstAttribute="top" secondItem="Omw-8V-rvW" secondAttribute="bottom" id="dNp-CV-AaF"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="CVs-7U-PeD" secondAttribute="bottom" id="ePf-8W-ed8"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="U9d-rg-FPG" secondAttribute="bottom" id="pIJ-nu-fuR"/>
                             <constraint firstItem="Omw-8V-rvW" firstAttribute="leading" secondItem="aqf-dw-y1Z" secondAttribute="trailing" id="pgY-n1-xAk"/>
+                            <constraint firstItem="U9d-rg-FPG" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="tds-uI-L1u"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="VbV-6E-Mdk"/>
@@ -272,6 +319,7 @@
                     <connections>
                         <outlet property="tvCars" destination="O2c-Cc-hgH" id="ig3-Ca-oar"/>
                         <outlet property="uploadIcon" destination="m9w-Jg-bC0" id="wWi-hp-HBC"/>
+                        <outlet property="uploadImageBlur" destination="U9d-rg-FPG" id="78x-Dg-0tO"/>
                         <segue destination="Day-LE-nZs" kind="push" identifier="ImageCaptureViewController1" id="J65-2N-ncS"/>
                     </connections>
                 </viewController>
@@ -831,6 +879,7 @@
         <image name="Focus1" width="512" height="512"/>
         <image name="Gear_icon" width="1334" height="1343"/>
         <image name="User-Interface-Plus-icon copy" width="164" height="164"/>
+        <image name="back" width="128" height="128"/>
         <image name="backArrow" width="320" height="320"/>
         <image name="capture" width="526" height="526"/>
         <image name="circle2" width="100" height="100"/>
