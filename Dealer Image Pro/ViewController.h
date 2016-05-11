@@ -17,10 +17,9 @@
     
 
     __weak IBOutlet UIImageView *arrow;
-
     __weak IBOutlet UILabel *uploadSuccessNote;
     __weak IBOutlet UIButton *uploadSuccessButton;
-    __weak IBOutlet UIVisualEffectView *uploadImageBlur;
+    __weak IBOutlet UIView *uploadImageBlur;
     IBOutlet UITableView *tvCars;
     DBRestClient* restClient;
     
@@ -31,7 +30,8 @@
     UIAlertView *deleteAlert;
 }
 @property (nonatomic,strong) DropboxManager *objManager;
-@property (weak, nonatomic) IBOutlet UIButton *uploadIcon;
+@property (weak, nonatomic) IBOutlet UIButton *grayUploadIcon;
+@property (weak, nonatomic) IBOutlet UIButton *yellowUploadIcon;
 
 
 @end
