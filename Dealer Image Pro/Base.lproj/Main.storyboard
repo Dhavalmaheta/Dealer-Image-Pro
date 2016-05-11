@@ -29,6 +29,7 @@
             <string>GothamBook</string>
             <string>GothamBook</string>
             <string>GothamBook</string>
+            <string>GothamBook</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -215,6 +216,12 @@
                                             <color key="textColor" red="0.50588235294117645" green="0.50588235294117645" blue="0.50588235294117645" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000001192092896" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Upload Vehicles" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jIJ-7e-WKp">
+                                            <rect key="frame" x="79" y="455" width="285" height="40"/>
+                                            <fontDescription key="fontDescription" name="GothamBook" family="Gotham Book" pointSize="28"/>
+                                            <color key="textColor" red="0.99215686270000003" green="0.90980392160000001" blue="0.01176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                         <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m9w-Jg-bC0">
                                             <rect key="frame" x="161" y="349" width="120" height="140"/>
                                             <inset key="contentEdgeInsets" minX="8" minY="0.0" maxX="8" maxY="28"/>
@@ -226,6 +233,7 @@
                                         <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VpT-sb-Ah7">
                                             <rect key="frame" x="161" y="349" width="120" height="140"/>
                                             <inset key="contentEdgeInsets" minX="8" minY="0.0" maxX="8" maxY="28"/>
+                                            <state key="normal" image="yellowUploadIcon"/>
                                             <connections>
                                                 <action selector="uploadButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hs6-Qe-gqu"/>
                                             </connections>
@@ -357,11 +365,13 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
                         <outlet property="arrow" destination="xnv-fZ-7VK" id="uah-Sq-Axt"/>
+                        <outlet property="grayText" destination="SD4-PZ-ygY" id="5U2-ob-6WY"/>
                         <outlet property="grayUploadIcon" destination="m9w-Jg-bC0" id="5E4-QO-4Mu"/>
                         <outlet property="tvCars" destination="O2c-Cc-hgH" id="ig3-Ca-oar"/>
                         <outlet property="uploadImageBlur" destination="U9d-rg-FPG" id="78x-Dg-0tO"/>
                         <outlet property="uploadSuccessButton" destination="BOp-Nd-gSo" id="3Rx-WJ-onA"/>
                         <outlet property="uploadSuccessNote" destination="BPI-HN-ejO" id="rLY-cb-6nb"/>
+                        <outlet property="yellowText" destination="jIJ-7e-WKp" id="W9v-0x-GCP"/>
                         <outlet property="yellowUploadIcon" destination="VpT-sb-Ah7" id="R7s-gU-mD4"/>
                         <segue destination="Day-LE-nZs" kind="push" identifier="ImageCaptureViewController1" id="J65-2N-ncS"/>
                     </connections>
@@ -957,5 +967,6 @@
         <image name="rotate" width="80" height="80"/>
         <image name="textField" width="996" height="105"/>
         <image name="uploadIcon" width="600" height="600"/>
+        <image name="yellowUploadIcon" width="600" height="600"/>
     </resources>
 </document>

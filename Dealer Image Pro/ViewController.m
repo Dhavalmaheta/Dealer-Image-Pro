@@ -98,6 +98,18 @@
     NSFileManager *manager = [NSFileManager defaultManager];
     fileList = (NSMutableArray *) [manager contentsOfDirectoryAtPath:strPath error:nil];
     [tvCars reloadData];
+    if (fileList.count > 0) {
+        _grayUploadIcon.hidden = true;
+        _yellowUploadIcon.hidden = false;
+        grayText.hidden = true;
+        yellowText.hidden = false;
+
+    }else {
+        _grayUploadIcon.hidden = false;
+        _yellowUploadIcon.hidden = true;
+        grayText.hidden = false;
+        yellowText.hidden = true;
+    }
 }
 
 

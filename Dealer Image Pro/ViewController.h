@@ -14,8 +14,9 @@
 
 @interface ViewController : UIViewController<UITableViewDelegate,UITableViewDataSource , DropBoxDelegate , CarCellDelegate , UIAlertViewDelegate>
 {
+    __weak IBOutlet UILabel *yellowText;
     
-
+    __weak IBOutlet UILabel *grayText;
     __weak IBOutlet UIImageView *arrow;
     __weak IBOutlet UILabel *uploadSuccessNote;
     __weak IBOutlet UIButton *uploadSuccessButton;
