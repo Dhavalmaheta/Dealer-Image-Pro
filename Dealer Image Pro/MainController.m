@@ -20,17 +20,66 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    if(_vehicleReady.selectedSegmentIndex==0){
-        _readyView.hidden = false;
-        _notReadyView.hidden = true;
-    }
-    else if (_vehicleReady.selectedSegmentIndex==1){
-        _readyView.hidden = true;
-        _notReadyView.hidden = false;
-    }
+    
 
+    
+    // Establish setting for vehicle manager
+    if ((_vehicleType.selectedSegmentIndex==0) && (_vehicleReady.selectedSegmentIndex==0)){
+        _bodyStyle.hidden = false;
+        _disabledBodyStyle.hidden = true;
+        NSLog(@"New Vehicle that is ready");}
+    else if ((_vehicleType.selectedSegmentIndex==1) && (_vehicleReady.selectedSegmentIndex==0)){
+        _bodyStyle.hidden = false;
+        _disabledBodyStyle.hidden = true;
+        NSLog(@"Used Vehicle that is ready");}
+    else if ((_vehicleType.selectedSegmentIndex==1) && (_vehicleReady.selectedSegmentIndex==1)){
+        _bodyStyle.hidden = false;
+        _disabledBodyStyle.hidden = true;
+        NSLog(@"Used Vehicle that is not ready");}
+    else if ((_vehicleType.selectedSegmentIndex==0) && (_vehicleReady.selectedSegmentIndex==1)){
+        _bodyStyle.hidden = true;
+        _disabledBodyStyle.hidden = false;
+        NSLog(@"New Vehicle that is not ready");}
+}
+- (IBAction)vehicleReady:(id)sender {
+    
+    if ((_vehicleType.selectedSegmentIndex==0) && (_vehicleReady.selectedSegmentIndex==0)){
+        _bodyStyle.hidden = false;
+        _disabledBodyStyle.hidden = true;
+        NSLog(@"New Vehicle that is ready");}
+    else if ((_vehicleType.selectedSegmentIndex==1) && (_vehicleReady.selectedSegmentIndex==0)){
+        _bodyStyle.hidden = false;
+        _disabledBodyStyle.hidden = true;
+        NSLog(@"Used Vehicle that is ready");}
+    else if ((_vehicleType.selectedSegmentIndex==1) && (_vehicleReady.selectedSegmentIndex==1)){
+        _bodyStyle.hidden = false;
+        _disabledBodyStyle.hidden = true;
+        NSLog(@"Used Vehicle that is not ready");}
+    else if ((_vehicleType.selectedSegmentIndex==0) && (_vehicleReady.selectedSegmentIndex==1)){
+        _bodyStyle.hidden = true;
+        _disabledBodyStyle.hidden = false;
+        NSLog(@"New Vehicle that is not ready");}
+    
+}
+- (IBAction)vehicleTypeButton:(id)sender {
+    if ((_vehicleType.selectedSegmentIndex==0) && (_vehicleReady.selectedSegmentIndex==0)){
+        _bodyStyle.hidden = false;
+        _disabledBodyStyle.hidden = true;
+        NSLog(@"New Vehicle that is ready");}
+    else if ((_vehicleType.selectedSegmentIndex==1) && (_vehicleReady.selectedSegmentIndex==0)){
+        _bodyStyle.hidden = false;
+        _disabledBodyStyle.hidden = true;
+        NSLog(@"Used Vehicle that is ready");}
+    else if ((_vehicleType.selectedSegmentIndex==1) && (_vehicleReady.selectedSegmentIndex==1)){
+        _bodyStyle.hidden = false;
+        _disabledBodyStyle.hidden = true;
+        NSLog(@"Used Vehicle that is not ready");}
+    else if ((_vehicleType.selectedSegmentIndex==0) && (_vehicleReady.selectedSegmentIndex==1)){
+        _bodyStyle.hidden = true;
+        _disabledBodyStyle.hidden = false;
+        NSLog(@"New Vehicle that is not ready");}
+}
 
-    }
 
 
 - (void)didReceiveMemoryWarning {
@@ -50,16 +99,7 @@
 
 
 
-- (IBAction)readyYN:(id)sender {
-    if(_vehicleReady.selectedSegmentIndex==0){
-        _readyView.hidden = false;
-        _notReadyView.hidden = true;
-    }
-    else if (_vehicleReady.selectedSegmentIndex==1){
-        _readyView.hidden = true;
-        _notReadyView.hidden = false;
-        }
-    }
+
 
 -(IBAction)onClickBack:(id)sender
 {

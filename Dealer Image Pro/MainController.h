@@ -15,8 +15,15 @@
 @property (weak, nonatomic) IBOutlet UITextField *vehicleModel;
 - (IBAction)nextButton:(id)sender;
 @property (strong, nonatomic) IBOutlet UISegmentedControl *vehicleReady;
-@property (strong, nonatomic) IBOutlet UIView *readyView;
-@property (strong, nonatomic) IBOutlet UIView *notReadyView;
+@property (strong, nonatomic) IBOutlet UISegmentedControl *bodyStyle;
+@property (strong, nonatomic) IBOutlet UISegmentedControl *disabledBodyStyle;
+
+@property (strong, nonatomic) IBOutlet UISegmentedControl *vehicleType;
+
+
+
+
+
 
 
 

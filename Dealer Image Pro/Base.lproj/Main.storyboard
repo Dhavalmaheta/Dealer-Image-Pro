@@ -33,11 +33,6 @@
             <string>GothamBook</string>
             <string>GothamBook</string>
             <string>GothamBook</string>
-            <string>GothamBook</string>
-            <string>GothamBook</string>
-            <string>GothamBook</string>
-            <string>GothamBook</string>
-            <string>GothamBook</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -606,30 +601,22 @@
                         <viewControllerLayoutGuide type="bottom" id="Ngm-sl-1SJ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="xCn-ms-vSI">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1600" height="1500"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HJC-0R-gsf">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="61"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1600" height="61"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Tf-ny-5Eu">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Tf-ny-5Eu">
                                         <rect key="frame" x="16" y="13" width="115" height="35"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="35" id="drW-sL-avp"/>
-                                            <constraint firstAttribute="width" constant="115" id="vmZ-A1-EL6"/>
-                                        </constraints>
                                         <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="80" maxY="0.0"/>
                                         <state key="normal" title="Back" image="backArrow"/>
                                         <connections>
                                             <action selector="onClickBack:" destination="Zo3-Ta-6KX" eventType="touchUpInside" id="ZWt-DN-ncX"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Back" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X4X-yV-wZ2">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Back" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X4X-yV-wZ2">
                                         <rect key="frame" x="64" y="11" width="83" height="40"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="83" id="3m0-fB-Ziu"/>
-                                            <constraint firstAttribute="height" constant="40" id="jVX-QQ-LwV"/>
-                                        </constraints>
                                         <fontDescription key="fontDescription" name="GothamBook" family="Gotham Book" pointSize="26"/>
                                         <color key="textColor" red="0.99215686270000003" green="0.90980392160000001" blue="0.01176470588" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -638,53 +625,20 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.058823529411764705" green="0.058823529411764705" blue="0.058823529411764705" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="61" id="GTy-20-qFQ"/>
-                                    <constraint firstItem="9Tf-ny-5Eu" firstAttribute="leading" secondItem="HJC-0R-gsf" secondAttribute="leading" constant="16" id="Haq-q5-siZ"/>
-                                    <constraint firstItem="X4X-yV-wZ2" firstAttribute="top" secondItem="HJC-0R-gsf" secondAttribute="top" constant="11" id="IUC-tr-xZ1"/>
-                                    <constraint firstItem="X4X-yV-wZ2" firstAttribute="leading" secondItem="HJC-0R-gsf" secondAttribute="leading" constant="64" id="Kq7-Ce-64Q"/>
-                                    <constraint firstItem="9Tf-ny-5Eu" firstAttribute="top" secondItem="HJC-0R-gsf" secondAttribute="top" constant="13" id="src-cv-HiP"/>
+                                    <constraint firstAttribute="height" constant="61" id="8di-eb-kgX"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dropShadow" translatesAutoresizingMaskIntoConstraints="NO" id="atY-mA-Lmy">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dropShadow" translatesAutoresizingMaskIntoConstraints="NO" id="atY-mA-Lmy">
                                 <rect key="frame" x="0.0" y="61" width="1024" height="51"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="51" id="uTD-mR-8zM"/>
-                                </constraints>
                             </imageView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pbV-a4-JAe">
-                                <rect key="frame" x="0.0" y="61" width="1024" height="707"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pbV-a4-JAe">
+                                <rect key="frame" x="0.0" y="61" width="1600" height="1439"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LFi-dT-SmN">
-                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="104"/>
-                                        <subviews>
-                                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="7ko-Qr-YjT">
-                                                <rect key="frame" x="268" y="56" width="487" height="29"/>
-                                                <segments>
-                                                    <segment title="Yes"/>
-                                                    <segment title="No"/>
-                                                </segments>
-                                                <color key="tintColor" red="0.99215686270000003" green="0.90980392160000001" blue="0.01176470588" alpha="1" colorSpace="calibratedRGB"/>
-                                                <connections>
-                                                    <action selector="readyYN:" destination="Zo3-Ta-6KX" eventType="valueChanged" id="9RI-aT-9Vi"/>
-                                                </connections>
-                                            </segmentedControl>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Is the Vehicle Ready?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nxP-V2-smC">
-                                                <rect key="frame" x="187" y="14" width="650" height="34"/>
-                                                <fontDescription key="fontDescription" name="GothamBook" family="Gotham Book" pointSize="22"/>
-                                                <color key="textColor" red="0.91457964619999998" green="0.91457964619999998" blue="0.91457964619999998" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="104" id="gV4-Pb-xn9"/>
-                                        </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xLy-HG-1cF">
-                                        <rect key="frame" x="0.0" y="103" width="1024" height="604"/>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xLy-HG-1cF">
+                                        <rect key="frame" x="497" y="0.0" width="527" height="716"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter vehicle make here" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="qGi-oa-agO">
-                                                <rect key="frame" x="268" y="359" width="487" height="30"/>
+                                                <rect key="frame" x="20" y="435" width="487" height="30"/>
                                                 <color key="tintColor" red="0.82191933113434346" green="0.0" blue="0.015238379143026422" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" returnKeyType="next"/>
@@ -693,7 +647,7 @@
                                                 </connections>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter vehicle model here" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="a79-A1-B4M">
-                                                <rect key="frame" x="269" y="437" width="487" height="30"/>
+                                                <rect key="frame" x="21" y="513" width="487" height="30"/>
                                                 <color key="tintColor" red="0.82191933113434346" green="0.0" blue="0.015238379143026422" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" returnKeyType="next"/>
@@ -702,10 +656,10 @@
                                                 </connections>
                                             </textField>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="nextButton" translatesAutoresizingMaskIntoConstraints="NO" id="2TE-7P-x10">
-                                                <rect key="frame" x="269" y="500" width="487" height="56"/>
+                                                <rect key="frame" x="21" y="576" width="487" height="56"/>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CN1-2V-S77">
-                                                <rect key="frame" x="282" y="504" width="461" height="48"/>
+                                                <rect key="frame" x="34" y="580" width="461" height="48"/>
                                                 <fontDescription key="fontDescription" name="GothamBook" family="Gotham Book" pointSize="28"/>
                                                 <state key="normal" title="Next">
                                                     <color key="titleColor" red="0.99215686270000003" green="0.90980392160000001" blue="0.01176470588" alpha="1" colorSpace="calibratedRGB"/>
@@ -714,16 +668,18 @@
                                                     <action selector="nextButton:" destination="Zo3-Ta-6KX" eventType="touchUpInside" id="6Xq-Po-30L"/>
                                                 </connections>
                                             </button>
-                                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="M9T-41-MgQ">
-                                                <rect key="frame" x="268" y="44" width="487" height="29"/>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="UfO-bB-LZm">
+                                                <rect key="frame" x="20" y="202" width="487" height="29"/>
                                                 <segments>
-                                                    <segment title="New"/>
-                                                    <segment title="Used"/>
+                                                    <segment title="Coupe"/>
+                                                    <segment title="Sedan"/>
+                                                    <segment title="SUV / Van"/>
+                                                    <segment title="Truck"/>
                                                 </segments>
-                                                <color key="tintColor" red="0.99215686270000003" green="0.90980392160000001" blue="0.01176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             </segmentedControl>
-                                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="6MA-Zw-hKN">
-                                                <rect key="frame" x="268" y="126" width="487" height="29"/>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="6MA-Zw-hKN">
+                                                <rect key="frame" x="20" y="202" width="487" height="29"/>
                                                 <segments>
                                                     <segment title="Coupe"/>
                                                     <segment title="Sedan"/>
@@ -732,147 +688,117 @@
                                                 </segments>
                                                 <color key="tintColor" red="0.99215686270000003" green="0.90980392160000001" blue="0.01176470588" alpha="1" colorSpace="calibratedRGB"/>
                                             </segmentedControl>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vehicle Type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="202-o8-qRY">
-                                                <rect key="frame" x="187" y="0.0" width="650" height="38"/>
-                                                <fontDescription key="fontDescription" name="GothamBook" family="Gotham Book" pointSize="22"/>
-                                                <color key="textColor" red="0.91457964619999998" green="0.91457964619999998" blue="0.91457964619999998" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Body Style" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8v4-t7-E0S">
-                                                <rect key="frame" x="187" y="80" width="650" height="38"/>
+                                                <rect key="frame" x="-61" y="163" width="650" height="38"/>
                                                 <fontDescription key="fontDescription" name="GothamBook" family="Gotham Book" pointSize="22"/>
                                                 <color key="textColor" red="0.91457964619999998" green="0.91457964619999998" blue="0.91457964619999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter vehicle's vin number here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nbG-Ac-14o">
-                                                <rect key="frame" x="268" y="202" width="487" height="30"/>
+                                                <rect key="frame" x="20" y="278" width="487" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vin Number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ISB-th-FgH">
-                                                <rect key="frame" x="187" y="162" width="650" height="38"/>
+                                                <rect key="frame" x="-61" y="238" width="650" height="38"/>
                                                 <fontDescription key="fontDescription" name="GothamBook" family="Gotham Book" pointSize="22"/>
                                                 <color key="textColor" red="0.91457964619999998" green="0.91457964619999998" blue="0.91457964619999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Re-enter vehicle's vin number here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xbO-rQ-A81">
-                                                <rect key="frame" x="268" y="280" width="487" height="30"/>
+                                                <rect key="frame" x="20" y="356" width="487" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Confirm Vin Number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HpW-68-e7i">
-                                                <rect key="frame" x="186" y="240" width="650" height="38"/>
+                                                <rect key="frame" x="-62" y="316" width="650" height="38"/>
                                                 <fontDescription key="fontDescription" name="GothamBook" family="Gotham Book" pointSize="22"/>
                                                 <color key="textColor" red="0.91457964619999998" green="0.91457964619999998" blue="0.91457964619999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vehicle Make" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6yL-gd-2H2">
-                                                <rect key="frame" x="186" y="318" width="650" height="38"/>
+                                                <rect key="frame" x="-62" y="394" width="650" height="38"/>
                                                 <fontDescription key="fontDescription" name="GothamBook" family="Gotham Book" pointSize="22"/>
                                                 <color key="textColor" red="0.91457964619999998" green="0.91457964619999998" blue="0.91457964619999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vehicle Model" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lez-nw-qec">
-                                                <rect key="frame" x="187" y="397" width="650" height="38"/>
+                                                <rect key="frame" x="-61" y="473" width="650" height="38"/>
                                                 <fontDescription key="fontDescription" name="GothamBook" family="Gotham Book" pointSize="22"/>
                                                 <color key="textColor" red="0.91457964619999998" green="0.91457964619999998" blue="0.91457964619999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                        </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                    </view>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wOd-5P-Idn">
-                                        <rect key="frame" x="0.0" y="103" width="1024" height="604"/>
-                                        <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TJC-Yk-g3k">
-                                                <rect key="frame" x="267" y="198" width="490" height="30"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vehicle Location" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EaW-2q-4KL">
-                                                <rect key="frame" x="187" y="160" width="650" height="38"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Is the Vehicle Ready?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nxP-V2-smC">
+                                                <rect key="frame" x="21" y="85" width="488" height="34"/>
                                                 <fontDescription key="fontDescription" name="GothamBook" family="Gotham Book" pointSize="22"/>
                                                 <color key="textColor" red="0.91457964619999998" green="0.91457964619999998" blue="0.91457964619999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Re-enter vehicle's vin number here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6HG-7Z-Wt8">
-                                                <rect key="frame" x="267" y="122" width="487" height="30"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Confirm Vin Number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="230-hc-HZi">
-                                                <rect key="frame" x="187" y="84" width="650" height="38"/>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="M9T-41-MgQ">
+                                                <rect key="frame" x="21" y="49" width="487" height="29"/>
+                                                <segments>
+                                                    <segment title="New"/>
+                                                    <segment title="Used"/>
+                                                </segments>
+                                                <color key="tintColor" red="0.99215686270000003" green="0.90980392160000001" blue="0.01176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <action selector="vehicleTypeButton:" destination="Zo3-Ta-6KX" eventType="valueChanged" id="mWa-9K-d2W"/>
+                                                </connections>
+                                            </segmentedControl>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vehicle Type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="202-o8-qRY">
+                                                <rect key="frame" x="21" y="10" width="486" height="38"/>
                                                 <fontDescription key="fontDescription" name="GothamBook" family="Gotham Book" pointSize="22"/>
                                                 <color key="textColor" red="0.91457964619999998" green="0.91457964619999998" blue="0.91457964619999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter vehicle's vin number here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ssk-sR-ZNv">
-                                                <rect key="frame" x="267" y="46" width="487" height="30"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vin Number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a0p-yY-sAL">
-                                                <rect key="frame" x="187" y="0.0" width="650" height="38"/>
-                                                <fontDescription key="fontDescription" name="GothamBook" family="Gotham Book" pointSize="22"/>
-                                                <color key="textColor" red="0.91457964619999998" green="0.91457964619999998" blue="0.91457964619999998" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Explanation" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v0Q-kC-i05">
-                                                <rect key="frame" x="187" y="236" width="650" height="38"/>
-                                                <fontDescription key="fontDescription" name="GothamBook" family="Gotham Book" pointSize="22"/>
-                                                <color key="textColor" red="0.91457964619999998" green="0.91457964619999998" blue="0.91457964619999998" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="q4c-4K-8e9">
-                                                <rect key="frame" x="267" y="275" width="490" height="113"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                            </textView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="nextButton" translatesAutoresizingMaskIntoConstraints="NO" id="5Te-Gm-emk">
-                                                <rect key="frame" x="267" y="404" width="487" height="56"/>
-                                            </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="twC-pZ-Whn">
-                                                <rect key="frame" x="280" y="408" width="461" height="48"/>
-                                                <fontDescription key="fontDescription" name="GothamBook" family="Gotham Book" pointSize="28"/>
-                                                <state key="normal" title="Next">
-                                                    <color key="titleColor" red="0.99215686270000003" green="0.90980392160000001" blue="0.01176470588" alpha="1" colorSpace="calibratedRGB"/>
-                                                </state>
-                                            </button>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="7ko-Qr-YjT">
+                                                <rect key="frame" x="22" y="127" width="487" height="29"/>
+                                                <segments>
+                                                    <segment title="Yes"/>
+                                                    <segment title="No"/>
+                                                </segments>
+                                                <color key="tintColor" red="0.99215686270000003" green="0.90980392160000001" blue="0.01176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <action selector="vehicleReady:" destination="Zo3-Ta-6KX" eventType="valueChanged" id="oUU-Qm-t52"/>
+                                                </connections>
+                                            </segmentedControl>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="xLy-HG-1cF" firstAttribute="top" secondItem="pbV-a4-JAe" secondAttribute="top" constant="103" id="8NM-pm-VfS"/>
-                                    <constraint firstItem="LFi-dT-SmN" firstAttribute="top" secondItem="pbV-a4-JAe" secondAttribute="top" id="Nah-5x-EEl"/>
-                                    <constraint firstItem="xLy-HG-1cF" firstAttribute="leading" secondItem="pbV-a4-JAe" secondAttribute="leading" id="TMl-2A-Bwx"/>
-                                    <constraint firstAttribute="trailing" secondItem="xLy-HG-1cF" secondAttribute="trailing" id="bGF-rg-ha6"/>
-                                    <constraint firstItem="LFi-dT-SmN" firstAttribute="leading" secondItem="pbV-a4-JAe" secondAttribute="leading" id="rNt-E3-EVO"/>
-                                    <constraint firstAttribute="trailing" secondItem="LFi-dT-SmN" secondAttribute="trailing" id="rP8-fN-OJ3"/>
-                                    <constraint firstAttribute="bottom" secondItem="xLy-HG-1cF" secondAttribute="bottom" id="zdv-VJ-HrB"/>
+                                    <constraint firstAttribute="height" constant="1439" id="19t-ht-FIH"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="19t-ht-FIH"/>
+                                    </mask>
+                                </variation>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="0.29411764705882354" green="0.29411764705882354" blue="0.29411764705882354" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="atY-mA-Lmy" firstAttribute="top" secondItem="HJC-0R-gsf" secondAttribute="bottom" id="K2k-d2-JUI"/>
-                            <constraint firstItem="atY-mA-Lmy" firstAttribute="leading" secondItem="xCn-ms-vSI" secondAttribute="leading" id="OLd-Qg-Nyh"/>
-                            <constraint firstItem="HJC-0R-gsf" firstAttribute="leading" secondItem="xCn-ms-vSI" secondAttribute="leading" id="cjF-KT-f65"/>
-                            <constraint firstItem="HJC-0R-gsf" firstAttribute="top" secondItem="xCn-ms-vSI" secondAttribute="top" id="mWQ-fY-2cv"/>
-                            <constraint firstAttribute="trailing" secondItem="HJC-0R-gsf" secondAttribute="trailing" id="uZB-3n-GE4"/>
-                            <constraint firstAttribute="trailing" secondItem="atY-mA-Lmy" secondAttribute="trailing" id="yIg-BC-bJ9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pbV-a4-JAe" secondAttribute="trailing" constant="-20" id="6I1-aH-WTy"/>
+                            <constraint firstItem="Ngm-sl-1SJ" firstAttribute="top" secondItem="pbV-a4-JAe" secondAttribute="bottom" id="AKn-7B-JEz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HJC-0R-gsf" secondAttribute="trailing" constant="-20" id="JVE-Jp-i7j"/>
+                            <constraint firstItem="HJC-0R-gsf" firstAttribute="leading" secondItem="xCn-ms-vSI" secondAttribute="leadingMargin" constant="-20" id="OfC-3i-ewT"/>
+                            <constraint firstItem="HJC-0R-gsf" firstAttribute="top" secondItem="xCn-ms-vSI" secondAttribute="topMargin" id="USx-Kg-4RA"/>
+                            <constraint firstItem="pbV-a4-JAe" firstAttribute="leading" secondItem="xCn-ms-vSI" secondAttribute="leadingMargin" constant="-20" id="eIt-79-bfw"/>
+                            <constraint firstItem="pbV-a4-JAe" firstAttribute="top" secondItem="HJC-0R-gsf" secondAttribute="bottom" id="sh9-Uh-FpD"/>
                         </constraints>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="1600" height="1500"/>
                     <connections>
-                        <outlet property="notReadyView" destination="wOd-5P-Idn" id="rUi-xD-xBY"/>
-                        <outlet property="readyView" destination="xLy-HG-1cF" id="7zd-Qn-Ekp"/>
+                        <outlet property="bodyStyle" destination="6MA-Zw-hKN" id="T4v-4q-q9U"/>
+                        <outlet property="disabledBodyStyle" destination="UfO-bB-LZm" id="b6P-3O-0Ut"/>
+                        <outlet property="stockNumer" destination="nbG-Ac-14o" id="f4A-eW-Hfx"/>
                         <outlet property="vehicleMake" destination="qGi-oa-agO" id="0OP-2f-30L"/>
                         <outlet property="vehicleModel" destination="a79-A1-B4M" id="Oqd-Ee-7r2"/>
-                        <outlet property="vehicleReady" destination="7ko-Qr-YjT" id="v2r-7N-5Yx"/>
+                        <outlet property="vehicleReady" destination="7ko-Qr-YjT" id="IDv-af-dVp"/>
+                        <outlet property="vehicleType" destination="M9T-41-MgQ" id="n1H-LZ-ZgZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n5k-3d-DXM" userLabel="First Responder" sceneMemberID="firstResponder"/>
