@@ -18,6 +18,10 @@
 @property (strong, nonatomic) IBOutlet UISegmentedControl *bodyStyle;
 @property (strong, nonatomic) IBOutlet UISegmentedControl *disabledBodyStyle;
 @property (strong, nonatomic) IBOutlet UILabel *bodyStyleLabel;
+@property (strong, nonatomic) IBOutlet UITextField *confirmVin;
+@property (strong, nonatomic) IBOutlet UILabel *vinNumberLabel;
+@property (strong, nonatomic) IBOutlet UILabel *confirmVinLabel;
+
 
 @property (strong, nonatomic) IBOutlet UISegmentedControl *vehicleType;
 

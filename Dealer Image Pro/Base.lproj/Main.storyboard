@@ -769,6 +769,9 @@
                                                 <rect key="frame" x="20" y="278" width="487" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" returnKeyType="next"/>
+                                                <connections>
+                                                    <action selector="vinValueChange:" destination="Zo3-Ta-6KX" eventType="editingDidBegin" id="byC-rs-OWN"/>
+                                                </connections>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vin Number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ISB-th-FgH">
                                                 <rect key="frame" x="-61" y="238" width="650" height="38"/>
@@ -780,6 +783,9 @@
                                                 <rect key="frame" x="20" y="356" width="487" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" returnKeyType="next"/>
+                                                <connections>
+                                                    <action selector="confirmValueChange:" destination="Zo3-Ta-6KX" eventType="editingDidBegin" id="6bi-VL-vSI"/>
+                                                </connections>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Confirm Vin Number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HpW-68-e7i">
                                                 <rect key="frame" x="-62" y="316" width="650" height="38"/>
@@ -874,12 +880,15 @@
                     <connections>
                         <outlet property="bodyStyle" destination="6MA-Zw-hKN" id="T4v-4q-q9U"/>
                         <outlet property="bodyStyleLabel" destination="8v4-t7-E0S" id="zXW-cf-bW6"/>
+                        <outlet property="confirmVin" destination="xbO-rQ-A81" id="PFx-6E-IIP"/>
+                        <outlet property="confirmVinLabel" destination="HpW-68-e7i" id="1XR-Xv-lAx"/>
                         <outlet property="disabledBodyStyle" destination="UfO-bB-LZm" id="b6P-3O-0Ut"/>
                         <outlet property="stockNumer" destination="nbG-Ac-14o" id="f4A-eW-Hfx"/>
                         <outlet property="vehicleMake" destination="qGi-oa-agO" id="0OP-2f-30L"/>
                         <outlet property="vehicleModel" destination="a79-A1-B4M" id="Oqd-Ee-7r2"/>
                         <outlet property="vehicleReady" destination="7ko-Qr-YjT" id="IDv-af-dVp"/>
                         <outlet property="vehicleType" destination="M9T-41-MgQ" id="n1H-LZ-ZgZ"/>
+                        <outlet property="vinNumberLabel" destination="ISB-th-FgH" id="2df-wi-puf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n5k-3d-DXM" userLabel="First Responder" sceneMemberID="firstResponder"/>

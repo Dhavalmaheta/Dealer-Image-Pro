@@ -122,6 +122,12 @@
 }
 
 - (IBAction)nextButton:(id)sender {
+    
+    if ([_stockNumer.text isEqualToString:_confirmVin.text]){
+        
+    
+    
+    
     if(![_stockNumer hasText]){
         
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Stock Number is required"
@@ -172,6 +178,13 @@
         newView.strStockNumber = _stockNumer.text;
         [self.navigationController pushViewController:newView animated:YES];
     }
+    
+
+    }else {
+        _vinNumberLabel.textColor = [UIColor colorWithRed:255.0/255.0 green:0.0/255.0 blue:0.0/255.0 alpha:1.0];
+        _confirmVinLabel.textColor = [UIColor colorWithRed:255.0/255.0 green:0.0/255.0 blue:0.0/255.0 alpha:1.0];
+        
+    }
 
 //    strMainPath = [self genDirectory];
 //    [self createDirForImage:strMainPath];
@@ -205,6 +218,19 @@
     
     return strDir;
 }
+
+- (IBAction)vinValueChange:(id)sender {
+    
+    _vinNumberLabel.textColor = [UIColor colorWithRed:250.0/255.0 green:250.0/255.0 blue:250.0/255.0 alpha:1.0];
+    _confirmVinLabel.textColor = [UIColor colorWithRed:250.0/255.0 green:250.0/255.0 blue:250.0/255.0 alpha:1.0];
+    
+}
+
+- (IBAction)confirmValueChange:(id)sender {
+    _vinNumberLabel.textColor = [UIColor colorWithRed:250.0/255.0 green:250.0/255.0 blue:250.0/255.0 alpha:1.0];
+    _confirmVinLabel.textColor = [UIColor colorWithRed:250.0/255.0 green:250.0/255.0 blue:250.0/255.0 alpha:1.0];
+}
+
 
 
 -(void)createDirForImage :(NSString *)dirName
