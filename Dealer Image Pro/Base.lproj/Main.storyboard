@@ -695,29 +695,31 @@
                                     <constraint firstAttribute="height" constant="61" id="8di-eb-kgX"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dropShadow" translatesAutoresizingMaskIntoConstraints="NO" id="atY-mA-Lmy">
-                                <rect key="frame" x="0.0" y="61" width="1024" height="51"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dropShadow" translatesAutoresizingMaskIntoConstraints="NO" id="atY-mA-Lmy">
+                                <rect key="frame" x="0.0" y="61" width="1600" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="SZO-ek-7Dj"/>
+                                </constraints>
                             </imageView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pbV-a4-JAe">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pbV-a4-JAe" customClass="TPKeyboardAvoidingScrollView">
                                 <rect key="frame" x="0.0" y="61" width="1600" height="1439"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xLy-HG-1cF">
-                                        <rect key="frame" x="497" y="0.0" width="527" height="716"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xLy-HG-1cF">
+                                        <rect key="frame" x="537" y="8" width="527" height="716"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter vehicle make here" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="qGi-oa-agO">
                                                 <rect key="frame" x="20" y="435" width="487" height="30"/>
                                                 <color key="tintColor" red="0.82191933113434346" green="0.0" blue="0.015238379143026422" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" returnKeyType="next"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" returnKeyType="next"/>
                                                 <connections>
                                                     <outlet property="delegate" destination="Zo3-Ta-6KX" id="VFS-dV-FGd"/>
                                                 </connections>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter vehicle model here" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="a79-A1-B4M">
                                                 <rect key="frame" x="21" y="513" width="487" height="30"/>
-                                                <color key="tintColor" red="0.82191933113434346" green="0.0" blue="0.015238379143026422" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" returnKeyType="next"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" returnKeyType="done"/>
                                                 <connections>
                                                     <outlet property="delegate" destination="Zo3-Ta-6KX" id="lRK-eb-gTb"/>
                                                 </connections>
@@ -764,7 +766,7 @@
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter vehicle's vin number here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nbG-Ac-14o">
                                                 <rect key="frame" x="20" y="278" width="487" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" returnKeyType="next"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vin Number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ISB-th-FgH">
                                                 <rect key="frame" x="-61" y="238" width="650" height="38"/>
@@ -772,10 +774,10 @@
                                                 <color key="textColor" red="0.91457964619999998" green="0.91457964619999998" blue="0.91457964619999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Re-enter vehicle's vin number here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xbO-rQ-A81">
+                                            <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Re-enter vehicle's vin number here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xbO-rQ-A81">
                                                 <rect key="frame" x="20" y="356" width="487" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" returnKeyType="next"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Confirm Vin Number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HpW-68-e7i">
                                                 <rect key="frame" x="-62" y="316" width="650" height="38"/>
@@ -831,10 +833,16 @@
                                             </segmentedControl>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="716" id="rks-Jd-p4g"/>
+                                            <constraint firstAttribute="width" constant="527" id="sKt-zM-dAX"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1439" id="19t-ht-FIH"/>
+                                    <constraint firstItem="xLy-HG-1cF" firstAttribute="top" secondItem="pbV-a4-JAe" secondAttribute="top" constant="8" id="CYb-h7-7a7"/>
+                                    <constraint firstItem="xLy-HG-1cF" firstAttribute="centerX" secondItem="pbV-a4-JAe" secondAttribute="centerX" id="Pme-AE-afb"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -847,9 +855,12 @@
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="pbV-a4-JAe" secondAttribute="trailing" constant="-20" id="6I1-aH-WTy"/>
                             <constraint firstItem="Ngm-sl-1SJ" firstAttribute="top" secondItem="pbV-a4-JAe" secondAttribute="bottom" id="AKn-7B-JEz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="atY-mA-Lmy" secondAttribute="trailing" constant="-20" id="F0B-PP-Abq"/>
                             <constraint firstAttribute="trailingMargin" secondItem="HJC-0R-gsf" secondAttribute="trailing" constant="-20" id="JVE-Jp-i7j"/>
                             <constraint firstItem="HJC-0R-gsf" firstAttribute="leading" secondItem="xCn-ms-vSI" secondAttribute="leadingMargin" constant="-20" id="OfC-3i-ewT"/>
                             <constraint firstItem="HJC-0R-gsf" firstAttribute="top" secondItem="xCn-ms-vSI" secondAttribute="topMargin" id="USx-Kg-4RA"/>
+                            <constraint firstItem="atY-mA-Lmy" firstAttribute="leading" secondItem="xCn-ms-vSI" secondAttribute="leadingMargin" constant="-20" id="ZOV-Hq-DSU"/>
+                            <constraint firstItem="atY-mA-Lmy" firstAttribute="top" secondItem="HJC-0R-gsf" secondAttribute="bottom" id="cpr-FT-GZW"/>
                             <constraint firstItem="pbV-a4-JAe" firstAttribute="leading" secondItem="xCn-ms-vSI" secondAttribute="leadingMargin" constant="-20" id="eIt-79-bfw"/>
                             <constraint firstItem="pbV-a4-JAe" firstAttribute="top" secondItem="HJC-0R-gsf" secondAttribute="bottom" id="sh9-Uh-FpD"/>
                         </constraints>

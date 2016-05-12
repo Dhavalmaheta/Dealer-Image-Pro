@@ -21,13 +21,14 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-
+    NSString *vehicleManager = @"";
     
     // Establish setting for vehicle manager
     if ((_vehicleType.selectedSegmentIndex==0) && (_vehicleReady.selectedSegmentIndex==0)){
         _bodyStyle.hidden = false;
         _disabledBodyStyle.hidden = true;
         NSLog(@"New Vehicle that is ready");}
+    
     else if ((_vehicleType.selectedSegmentIndex==1) && (_vehicleReady.selectedSegmentIndex==0)){
         _bodyStyle.hidden = false;
         _disabledBodyStyle.hidden = true;
