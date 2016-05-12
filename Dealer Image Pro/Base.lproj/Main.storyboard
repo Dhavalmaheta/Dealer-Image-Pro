@@ -33,6 +33,7 @@
             <string>GothamBook</string>
             <string>GothamBook</string>
             <string>GothamBook</string>
+            <string>GothamBook</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -104,6 +105,71 @@
             <point key="canvasLocation" x="788" y="802"/>
         </scene>
         <!--View Controller-->
+        <scene sceneID="ygq-By-Ku7">
+            <objects>
+                <viewController id="q8p-EX-6eh" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aGg-RW-8Z7"/>
+                        <viewControllerLayoutGuide type="bottom" id="fYs-Ty-r5Q"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ffi-Aw-zZo">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" indicatorStyle="black" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="66D-R2-DTA">
+                                <rect key="frame" x="0.0" y="69" width="1024" height="699"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="sSW-xo-2vO">
+                                    <size key="itemSize" width="353" height="181"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CwW-iS-77C">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="61"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="00x-43-xFk">
+                                        <rect key="frame" x="16" y="13" width="115" height="35"/>
+                                        <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="80" maxY="0.0"/>
+                                        <state key="normal" title="Back" image="backArrow"/>
+                                        <connections>
+                                            <action selector="onClickBack:" destination="Zo3-Ta-6KX" eventType="touchUpInside" id="M17-fs-ImC"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Back" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ez3-op-5dA">
+                                        <rect key="frame" x="64" y="11" width="83" height="40"/>
+                                        <fontDescription key="fontDescription" name="GothamBook" family="Gotham Book" pointSize="26"/>
+                                        <color key="textColor" red="0.99215686270000003" green="0.90980392160000001" blue="0.01176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <size key="shadowOffset" width="0.0" height="0.0"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.058823529409999999" green="0.058823529409999999" blue="0.058823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="gtg-yI-Aue"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="66D-R2-DTA" firstAttribute="leading" secondItem="ffi-Aw-zZo" secondAttribute="leading" id="32c-sh-WOq"/>
+                            <constraint firstItem="fYs-Ty-r5Q" firstAttribute="top" secondItem="66D-R2-DTA" secondAttribute="bottom" id="BaZ-ri-aRG"/>
+                            <constraint firstAttribute="trailing" secondItem="66D-R2-DTA" secondAttribute="trailing" id="KIB-dJ-vYA"/>
+                            <constraint firstItem="CwW-iS-77C" firstAttribute="leading" secondItem="ffi-Aw-zZo" secondAttribute="leading" id="RbO-SY-uBo"/>
+                            <constraint firstAttribute="trailing" secondItem="CwW-iS-77C" secondAttribute="trailing" id="b17-it-6j6"/>
+                            <constraint firstItem="CwW-iS-77C" firstAttribute="top" secondItem="ffi-Aw-zZo" secondAttribute="top" id="t2d-dB-cSG"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BmV-oW-WBj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="434" y="-183"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
@@ -172,6 +238,7 @@
                                         <color key="backgroundColor" red="0.99607849120000003" green="0.99607849120000003" blue="0.99215692280000001" alpha="1" colorSpace="deviceRGB"/>
                                         <connections>
                                             <outlet property="lblTitle" destination="0zV-BU-ctZ" id="6mL-75-o6h"/>
+                                            <segue destination="q8p-EX-6eh" kind="show" id="VRJ-Se-r26"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
