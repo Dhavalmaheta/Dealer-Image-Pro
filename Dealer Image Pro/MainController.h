@@ -17,6 +17,7 @@
 @property (strong, nonatomic) IBOutlet UISegmentedControl *vehicleReady;
 @property (strong, nonatomic) IBOutlet UISegmentedControl *bodyStyle;
 @property (strong, nonatomic) IBOutlet UISegmentedControl *disabledBodyStyle;
+@property (strong, nonatomic) IBOutlet UILabel *bodyStyleLabel;
 
 @property (strong, nonatomic) IBOutlet UISegmentedControl *vehicleType;
 

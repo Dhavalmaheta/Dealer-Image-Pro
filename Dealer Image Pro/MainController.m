@@ -27,38 +27,46 @@
     if ((_vehicleType.selectedSegmentIndex==0) && (_vehicleReady.selectedSegmentIndex==0)){
         _bodyStyle.hidden = false;
         _disabledBodyStyle.hidden = true;
+        _bodyStyleLabel.textColor = [UIColor colorWithRed:250.0/255.0 green:250.0/255.0 blue:250.0/255.0 alpha:1.0];
         NSLog(@"New Vehicle that is ready");}
     
     else if ((_vehicleType.selectedSegmentIndex==1) && (_vehicleReady.selectedSegmentIndex==0)){
         _bodyStyle.hidden = false;
         _disabledBodyStyle.hidden = true;
+        _bodyStyleLabel.textColor = [UIColor colorWithRed:250.0/255.0 green:250.0/255.0 blue:250.0/255.0 alpha:1.0];
         NSLog(@"Used Vehicle that is ready");}
     else if ((_vehicleType.selectedSegmentIndex==1) && (_vehicleReady.selectedSegmentIndex==1)){
         _bodyStyle.hidden = false;
         _disabledBodyStyle.hidden = true;
+        _bodyStyleLabel.textColor = [UIColor colorWithRed:250.0/255.0 green:250.0/255.0 blue:250.0/255.0 alpha:1.0];
         NSLog(@"Used Vehicle that is not ready");}
     else if ((_vehicleType.selectedSegmentIndex==0) && (_vehicleReady.selectedSegmentIndex==1)){
         _bodyStyle.hidden = true;
         _disabledBodyStyle.hidden = false;
+        _bodyStyleLabel.textColor = [UIColor colorWithRed:50.0/255.0 green:50.0/255.0 blue:50.0/255.0 alpha:1.0];
         NSLog(@"New Vehicle that is not ready");}
 }
 - (IBAction)vehicleReady:(id)sender {
-    
     if ((_vehicleType.selectedSegmentIndex==0) && (_vehicleReady.selectedSegmentIndex==0)){
         _bodyStyle.hidden = false;
         _disabledBodyStyle.hidden = true;
+        _bodyStyleLabel.textColor = [UIColor colorWithRed:250.0/255.0 green:250.0/255.0 blue:250.0/255.0 alpha:1.0];
         NSLog(@"New Vehicle that is ready");}
+    
     else if ((_vehicleType.selectedSegmentIndex==1) && (_vehicleReady.selectedSegmentIndex==0)){
         _bodyStyle.hidden = false;
         _disabledBodyStyle.hidden = true;
+        _bodyStyleLabel.textColor = [UIColor colorWithRed:250.0/255.0 green:250.0/255.0 blue:250.0/255.0 alpha:1.0];
         NSLog(@"Used Vehicle that is ready");}
     else if ((_vehicleType.selectedSegmentIndex==1) && (_vehicleReady.selectedSegmentIndex==1)){
         _bodyStyle.hidden = false;
         _disabledBodyStyle.hidden = true;
+        _bodyStyleLabel.textColor = [UIColor colorWithRed:250.0/255.0 green:250.0/255.0 blue:250.0/255.0 alpha:1.0];
         NSLog(@"Used Vehicle that is not ready");}
     else if ((_vehicleType.selectedSegmentIndex==0) && (_vehicleReady.selectedSegmentIndex==1)){
         _bodyStyle.hidden = true;
         _disabledBodyStyle.hidden = false;
+        _bodyStyleLabel.textColor = [UIColor colorWithRed:50.0/255.0 green:50.0/255.0 blue:50.0/255.0 alpha:1.0];
         NSLog(@"New Vehicle that is not ready");}
     
 }
@@ -66,18 +74,23 @@
     if ((_vehicleType.selectedSegmentIndex==0) && (_vehicleReady.selectedSegmentIndex==0)){
         _bodyStyle.hidden = false;
         _disabledBodyStyle.hidden = true;
+        _bodyStyleLabel.textColor = [UIColor colorWithRed:250.0/255.0 green:250.0/255.0 blue:250.0/255.0 alpha:1.0];
         NSLog(@"New Vehicle that is ready");}
+    
     else if ((_vehicleType.selectedSegmentIndex==1) && (_vehicleReady.selectedSegmentIndex==0)){
         _bodyStyle.hidden = false;
         _disabledBodyStyle.hidden = true;
+        _bodyStyleLabel.textColor = [UIColor colorWithRed:250.0/255.0 green:250.0/255.0 blue:250.0/255.0 alpha:1.0];
         NSLog(@"Used Vehicle that is ready");}
     else if ((_vehicleType.selectedSegmentIndex==1) && (_vehicleReady.selectedSegmentIndex==1)){
         _bodyStyle.hidden = false;
         _disabledBodyStyle.hidden = true;
+        _bodyStyleLabel.textColor = [UIColor colorWithRed:250.0/255.0 green:250.0/255.0 blue:250.0/255.0 alpha:1.0];
         NSLog(@"Used Vehicle that is not ready");}
     else if ((_vehicleType.selectedSegmentIndex==0) && (_vehicleReady.selectedSegmentIndex==1)){
         _bodyStyle.hidden = true;
         _disabledBodyStyle.hidden = false;
+        _bodyStyleLabel.textColor = [UIColor colorWithRed:50.0/255.0 green:50.0/255.0 blue:50.0/255.0 alpha:1.0];
         NSLog(@"New Vehicle that is not ready");}
 }
 
@@ -199,10 +212,19 @@
     return;
 }
 
-- (BOOL)textFieldShouldReturn:(UITextField *)textField
+-(BOOL)textFieldShouldReturn:(UITextField*)textField
 {
-    [textField resignFirstResponder];
-    return  YES;
+    NSInteger nextTag = textField.tag + 1;
+    // Try to find next responder
+    UIResponder* nextResponder = [textField.superview viewWithTag:nextTag];
+    if (nextResponder) {
+        // Found next responder, so set it.
+        [nextResponder becomeFirstResponder];
+    } else {
+        // Not found, so remove keyboard.
+        [textField resignFirstResponder];
+    }
+    return NO; // We do not want UITextField to insert line-breaks.
 }
 
 
