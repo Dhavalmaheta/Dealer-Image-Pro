@@ -62,17 +62,7 @@
     
     [self->arrow.layer addAnimation:animation forKey:nil];
     
-    // Upload Icon
-    
-//            if([uploadArray count] ==0){
-//                _grayUploadIcon.hidden = true;
-//                _yellowUploadIcon.hidden = false;
-//            } else if([uploadArray count] > 0){
-//                _grayUploadIcon.hidden = true;
-//                _yellowUploadIcon.hidden = false;
-//            }
-//        
-//    
+
 
     
     

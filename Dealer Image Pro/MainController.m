@@ -20,7 +20,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-}
+    if(_vehicleReady.selectedSegmentIndex==0){
+        _readyView.hidden = false;
+        _notReadyView.hidden = true;
+    }
+    else if (_vehicleReady.selectedSegmentIndex==1){
+        _readyView.hidden = true;
+        _notReadyView.hidden = false;
+    }
+
+
+    }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -39,6 +50,16 @@
 
 
 
+- (IBAction)readyYN:(id)sender {
+    if(_vehicleReady.selectedSegmentIndex==0){
+        _readyView.hidden = false;
+        _notReadyView.hidden = true;
+    }
+    else if (_vehicleReady.selectedSegmentIndex==1){
+        _readyView.hidden = true;
+        _notReadyView.hidden = false;
+        }
+    }
 
 -(IBAction)onClickBack:(id)sender
 {
