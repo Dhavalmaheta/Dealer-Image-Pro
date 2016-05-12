@@ -7,11 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		032657F61CE4C3930013D33B /* DropboxSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 282EFC8D1CD45AC200E29E74 /* DropboxSDK.framework */; };
-		032657FF1CE4C8CE0013D33B /* TPKeyboardAvoidingCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 032657F81CE4C8CD0013D33B /* TPKeyboardAvoidingCollectionView.m */; };
 		032658001CE4C8CE0013D33B /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 032657FA1CE4C8CD0013D33B /* TPKeyboardAvoidingScrollView.m */; };
-		032658011CE4C8CE0013D33B /* TPKeyboardAvoidingTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 032657FC1CE4C8CD0013D33B /* TPKeyboardAvoidingTableView.m */; };
 		032658021CE4C8CE0013D33B /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 032657FE1CE4C8CD0013D33B /* UIScrollView+TPKeyboardAvoidingAdditions.m */; };
+		032658071CE4DE470013D33B /* DropboxSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 282EFC8D1CD45AC200E29E74 /* DropboxSDK.framework */; };
 		146769061CC2732500D3D62F /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 146769051CC2732500D3D62F /* MainController.m */; };
 		1468BF331CE2287A00C32F87 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1468BF321CE2287A00C32F87 /* QuartzCore.framework */; };
 		14A68E991CC17C71008671DB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A68E981CC17C71008671DB /* main.m */; };
@@ -85,12 +83,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		032657F71CE4C8CD0013D33B /* TPKeyboardAvoidingCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingCollectionView.h; sourceTree = "<group>"; };
-		032657F81CE4C8CD0013D33B /* TPKeyboardAvoidingCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingCollectionView.m; sourceTree = "<group>"; };
 		032657F91CE4C8CD0013D33B /* TPKeyboardAvoidingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingScrollView.h; sourceTree = "<group>"; };
 		032657FA1CE4C8CD0013D33B /* TPKeyboardAvoidingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingScrollView.m; sourceTree = "<group>"; };
-		032657FB1CE4C8CD0013D33B /* TPKeyboardAvoidingTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingTableView.h; sourceTree = "<group>"; };
-		032657FC1CE4C8CD0013D33B /* TPKeyboardAvoidingTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingTableView.m; sourceTree = "<group>"; };
 		032657FD1CE4C8CD0013D33B /* UIScrollView+TPKeyboardAvoidingAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+TPKeyboardAvoidingAdditions.h"; sourceTree = "<group>"; };
 		032657FE1CE4C8CD0013D33B /* UIScrollView+TPKeyboardAvoidingAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+TPKeyboardAvoidingAdditions.m"; sourceTree = "<group>"; };
 		146769041CC2732500D3D62F /* MainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainController.h; sourceTree = "<group>"; };
@@ -204,7 +198,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				032657F61CE4C3930013D33B /* DropboxSDK.framework in Frameworks */,
+				032658071CE4DE470013D33B /* DropboxSDK.framework in Frameworks */,
 				1468BF331CE2287A00C32F87 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -229,12 +223,8 @@
 		032658031CE4C8E10013D33B /* Keyboard */ = {
 			isa = PBXGroup;
 			children = (
-				032657F71CE4C8CD0013D33B /* TPKeyboardAvoidingCollectionView.h */,
-				032657F81CE4C8CD0013D33B /* TPKeyboardAvoidingCollectionView.m */,
 				032657F91CE4C8CD0013D33B /* TPKeyboardAvoidingScrollView.h */,
 				032657FA1CE4C8CD0013D33B /* TPKeyboardAvoidingScrollView.m */,
-				032657FB1CE4C8CD0013D33B /* TPKeyboardAvoidingTableView.h */,
-				032657FC1CE4C8CD0013D33B /* TPKeyboardAvoidingTableView.m */,
 				032657FD1CE4C8CD0013D33B /* UIScrollView+TPKeyboardAvoidingAdditions.h */,
 				032657FE1CE4C8CD0013D33B /* UIScrollView+TPKeyboardAvoidingAdditions.m */,
 			);
@@ -590,10 +580,8 @@
 				282EFD791CD46C0800E29E74 /* SCFilter+VideoComposition.m in Sources */,
 				282EFD731CD46C0800E29E74 /* SCFilterImageView.m in Sources */,
 				282EFD801CD46C0800E29E74 /* SCProcessingQueue.m in Sources */,
-				032658011CE4C8CE0013D33B /* TPKeyboardAvoidingTableView.m in Sources */,
 				282EFD811CD46C0800E29E74 /* SCRecorder.m in Sources */,
 				282EFD841CD46C0800E29E74 /* SCRecorderToolsView.m in Sources */,
-				032657FF1CE4C8CE0013D33B /* TPKeyboardAvoidingCollectionView.m in Sources */,
 				282EFD7B1CD46C0800E29E74 /* SCFilterAnimation.m in Sources */,
 				032658021CE4C8CE0013D33B /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
 				14A68E9C1CC17C71008671DB /* AppDelegate.m in Sources */,
@@ -865,6 +853,9 @@
 					"$(PROJECT_DIR)/Dealer",
 					Image,
 					Pro/frmwork,
+					"$(PROJECT_DIR)/Dealer",
+					Image,
+					Pro/frmwork,
 				);
 				GCC_PREFIX_HEADER = "Dealer Image Pro/DealerImagePrefixHeader.pch";
 				INFOPLIST_FILE = "Dealer Image Pro/Info.plist";
@@ -885,6 +876,9 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(PROJECT_DIR)/Dealer",
+					Image,
+					Pro/frmwork,
 					"$(PROJECT_DIR)/Dealer",
 					Image,
 					Pro/frmwork,

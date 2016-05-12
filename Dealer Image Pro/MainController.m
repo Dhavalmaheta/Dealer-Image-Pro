@@ -9,6 +9,7 @@
 #import "MainController.h"
 #import "ImageCaptureViewController.h"
 
+
 @interface MainController (){
     NSString *strMainPath;
 }
@@ -150,14 +151,36 @@
         return;
     }
     
-    strMainPath = [self genDirectory];
-    [self createDirForImage:strMainPath];
+    if (_vehicleType.selectedSegmentIndex==0){
+        
+        strMainPath = [self genDirectory];
+        [self createDirForImage:strMainPath];
+        
+        ImageCaptureViewController *newView = [self.storyboard instantiateViewControllerWithIdentifier:@"ImageCaptureViewController"];
+        newView.strDirPath = strMainPath;
+        newView.strStockNumber = _stockNumer.text;
+        [self.navigationController pushViewController:newView animated:YES];
+    }
     
-    ImageCaptureViewController *newView = [self.storyboard instantiateViewControllerWithIdentifier:@"ImageCaptureViewController"];
-    newView.strDirPath = strMainPath;
-    newView.strStockNumber = _stockNumer.text;
-    [self.navigationController pushViewController:newView animated:YES];
+    if (_vehicleType.selectedSegmentIndex==1){
+        
+        strMainPath = [self genDirectory];
+        [self createDirForImage:strMainPath];
+        
+        ImageCaptureViewController *newView = [self.storyboard instantiateViewControllerWithIdentifier:@"ImageCaptureViewController2"];
+        newView.strDirPath = strMainPath;
+        newView.strStockNumber = _stockNumer.text;
+        [self.navigationController pushViewController:newView animated:YES];
+    }
 
+//    strMainPath = [self genDirectory];
+//    [self createDirForImage:strMainPath];
+//    
+//    ImageCaptureViewController *newView = [self.storyboard instantiateViewControllerWithIdentifier:@"ImageCaptureViewController2"];
+//    newView.strDirPath = strMainPath;
+//    newView.strStockNumber = _stockNumer.text;
+//    [self.navigationController pushViewController:newView animated:YES];
+    
 }
 
 /*
