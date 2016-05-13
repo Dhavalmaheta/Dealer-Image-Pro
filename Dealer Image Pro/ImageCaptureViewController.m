@@ -21,7 +21,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    CGAffineTransform trans = CGAffineTransformMakeRotation(-M_PI_2);
+    slider.transform = trans;
     _recorder = [SCRecorder recorder];
     _recorder.captureSessionPreset = [SCRecorderTools bestCaptureSessionPresetCompatibleWithAllDevices];
     _recorder.delegate = self;

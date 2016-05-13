@@ -8,7 +8,7 @@
 
 #import "MainController.h"
 #import "ImageCaptureViewController.h"
-
+#import "TextFieldEffects.h"
 
 @interface MainController (){
     NSString *strMainPath;
@@ -18,11 +18,12 @@
 
 @implementation MainController
 
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    NSString *vehicleManager = @"";
     
     // Establish setting for vehicle manager
     if ((_vehicleType.selectedSegmentIndex==0) && (_vehicleReady.selectedSegmentIndex==0)){
@@ -101,20 +102,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
-
-
-
 
 -(IBAction)onClickBack:(id)sender
 {
@@ -248,17 +235,17 @@
     return;
 }
 
--(BOOL)textFieldShouldReturn:(UITextField*)textField
+-(BOOL)textFieldShouldReturn:(UITextField*)YoshikotextField
 {
-    NSInteger nextTag = textField.tag + 1;
+    NSInteger nextTag = YoshikotextField.tag + 1;
     // Try to find next responder
-    UIResponder* nextResponder = [textField.superview viewWithTag:nextTag];
+    UIResponder* nextResponder = [YoshikotextField.superview viewWithTag:nextTag];
     if (nextResponder) {
         // Found next responder, so set it.
         [nextResponder becomeFirstResponder];
     } else {
         // Not found, so remove keyboard.
-        [textField resignFirstResponder];
+        [YoshikotextField resignFirstResponder];
     }
     return NO; // We do not want UITextField to insert line-breaks.
 }

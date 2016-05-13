@@ -23,7 +23,7 @@
 		032658261CE5A1CE0013D33B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 032658211CE5A1CE0013D33B /* Info.plist */; };
 		032658271CE5A1CE0013D33B /* MGSwipeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 032658231CE5A1CE0013D33B /* MGSwipeButton.m */; };
 		032658281CE5A1CE0013D33B /* MGSwipeTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 032658251CE5A1CE0013D33B /* MGSwipeTableCell.m */; };
-		03A5F37A1CE5EC9700F286C0 /* DropboxSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 282EFC8D1CD45AC200E29E74 /* DropboxSDK.framework */; };
+		036D66DE1CE60E6000017C9E /* DropboxSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 282EFC8D1CD45AC200E29E74 /* DropboxSDK.framework */; };
 		146769061CC2732500D3D62F /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 146769051CC2732500D3D62F /* MainController.m */; };
 		1468BF331CE2287A00C32F87 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1468BF321CE2287A00C32F87 /* QuartzCore.framework */; };
 		14A68E991CC17C71008671DB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A68E981CC17C71008671DB /* main.m */; };
@@ -229,7 +229,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03A5F37A1CE5EC9700F286C0 /* DropboxSDK.framework in Frameworks */,
+				036D66DE1CE60E6000017C9E /* DropboxSDK.framework in Frameworks */,
 				1468BF331CE2287A00C32F87 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -937,6 +937,9 @@
 					"$(PROJECT_DIR)/Dealer",
 					Image,
 					Pro/frmwork,
+					"$(PROJECT_DIR)/Dealer",
+					Image,
+					Pro/frmwork,
 				);
 				GCC_PREFIX_HEADER = "Dealer Image Pro/DealerImagePrefixHeader.pch";
 				INFOPLIST_FILE = "Dealer Image Pro/Info.plist";
@@ -957,6 +960,9 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(PROJECT_DIR)/Dealer",
+					Image,
+					Pro/frmwork,
 					"$(PROJECT_DIR)/Dealer",
 					Image,
 					Pro/frmwork,
