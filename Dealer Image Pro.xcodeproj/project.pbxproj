@@ -9,7 +9,21 @@
 /* Begin PBXBuildFile section */
 		032658001CE4C8CE0013D33B /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 032657FA1CE4C8CD0013D33B /* TPKeyboardAvoidingScrollView.m */; };
 		032658021CE4C8CE0013D33B /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 032657FE1CE4C8CD0013D33B /* UIScrollView+TPKeyboardAvoidingAdditions.m */; };
-		032658071CE4DE470013D33B /* DropboxSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 282EFC8D1CD45AC200E29E74 /* DropboxSDK.framework */; };
+		032658151CE573FB0013D33B /* AkiraTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032658091CE573FB0013D33B /* AkiraTextField.swift */; };
+		032658161CE573FB0013D33B /* HoshiTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0326580A1CE573FB0013D33B /* HoshiTextField.swift */; };
+		032658171CE573FB0013D33B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0326580B1CE573FB0013D33B /* Info.plist */; };
+		032658181CE573FB0013D33B /* IsaoTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0326580C1CE573FB0013D33B /* IsaoTextField.swift */; };
+		032658191CE573FB0013D33B /* JiroTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0326580D1CE573FB0013D33B /* JiroTextField.swift */; };
+		0326581A1CE573FB0013D33B /* KaedeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0326580E1CE573FB0013D33B /* KaedeTextField.swift */; };
+		0326581B1CE573FB0013D33B /* MadokaTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0326580F1CE573FB0013D33B /* MadokaTextField.swift */; };
+		0326581C1CE573FB0013D33B /* MinoruTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032658101CE573FB0013D33B /* MinoruTextField.swift */; };
+		0326581D1CE573FB0013D33B /* TextFieldsEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032658121CE573FB0013D33B /* TextFieldsEffects.swift */; };
+		0326581E1CE573FB0013D33B /* YokoTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032658131CE573FB0013D33B /* YokoTextField.swift */; };
+		0326581F1CE573FB0013D33B /* YoshikoTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032658141CE573FB0013D33B /* YoshikoTextField.swift */; };
+		032658261CE5A1CE0013D33B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 032658211CE5A1CE0013D33B /* Info.plist */; };
+		032658271CE5A1CE0013D33B /* MGSwipeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 032658231CE5A1CE0013D33B /* MGSwipeButton.m */; };
+		032658281CE5A1CE0013D33B /* MGSwipeTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 032658251CE5A1CE0013D33B /* MGSwipeTableCell.m */; };
+		03A5F37A1CE5EC9700F286C0 /* DropboxSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 282EFC8D1CD45AC200E29E74 /* DropboxSDK.framework */; };
 		146769061CC2732500D3D62F /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 146769051CC2732500D3D62F /* MainController.m */; };
 		1468BF331CE2287A00C32F87 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1468BF321CE2287A00C32F87 /* QuartzCore.framework */; };
 		14A68E991CC17C71008671DB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A68E981CC17C71008671DB /* main.m */; };
@@ -87,6 +101,23 @@
 		032657FA1CE4C8CD0013D33B /* TPKeyboardAvoidingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingScrollView.m; sourceTree = "<group>"; };
 		032657FD1CE4C8CD0013D33B /* UIScrollView+TPKeyboardAvoidingAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+TPKeyboardAvoidingAdditions.h"; sourceTree = "<group>"; };
 		032657FE1CE4C8CD0013D33B /* UIScrollView+TPKeyboardAvoidingAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+TPKeyboardAvoidingAdditions.m"; sourceTree = "<group>"; };
+		032658091CE573FB0013D33B /* AkiraTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AkiraTextField.swift; sourceTree = "<group>"; };
+		0326580A1CE573FB0013D33B /* HoshiTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoshiTextField.swift; sourceTree = "<group>"; };
+		0326580B1CE573FB0013D33B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0326580C1CE573FB0013D33B /* IsaoTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IsaoTextField.swift; sourceTree = "<group>"; };
+		0326580D1CE573FB0013D33B /* JiroTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JiroTextField.swift; sourceTree = "<group>"; };
+		0326580E1CE573FB0013D33B /* KaedeTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KaedeTextField.swift; sourceTree = "<group>"; };
+		0326580F1CE573FB0013D33B /* MadokaTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MadokaTextField.swift; sourceTree = "<group>"; };
+		032658101CE573FB0013D33B /* MinoruTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MinoruTextField.swift; sourceTree = "<group>"; };
+		032658111CE573FB0013D33B /* TextFieldEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextFieldEffects.h; sourceTree = "<group>"; };
+		032658121CE573FB0013D33B /* TextFieldsEffects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldsEffects.swift; sourceTree = "<group>"; };
+		032658131CE573FB0013D33B /* YokoTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YokoTextField.swift; sourceTree = "<group>"; };
+		032658141CE573FB0013D33B /* YoshikoTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoshikoTextField.swift; sourceTree = "<group>"; };
+		032658211CE5A1CE0013D33B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		032658221CE5A1CE0013D33B /* MGSwipeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGSwipeButton.h; sourceTree = "<group>"; };
+		032658231CE5A1CE0013D33B /* MGSwipeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGSwipeButton.m; sourceTree = "<group>"; };
+		032658241CE5A1CE0013D33B /* MGSwipeTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGSwipeTableCell.h; sourceTree = "<group>"; };
+		032658251CE5A1CE0013D33B /* MGSwipeTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGSwipeTableCell.m; sourceTree = "<group>"; };
 		146769041CC2732500D3D62F /* MainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainController.h; sourceTree = "<group>"; };
 		146769051CC2732500D3D62F /* MainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainController.m; sourceTree = "<group>"; };
 		1468BF321CE2287A00C32F87 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -198,7 +229,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				032658071CE4DE470013D33B /* DropboxSDK.framework in Frameworks */,
+				03A5F37A1CE5EC9700F286C0 /* DropboxSDK.framework in Frameworks */,
 				1468BF331CE2287A00C32F87 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -231,6 +262,37 @@
 			name = Keyboard;
 			sourceTree = "<group>";
 		};
+		032658081CE573FB0013D33B /* TextFieldEffects */ = {
+			isa = PBXGroup;
+			children = (
+				032658091CE573FB0013D33B /* AkiraTextField.swift */,
+				0326580A1CE573FB0013D33B /* HoshiTextField.swift */,
+				0326580B1CE573FB0013D33B /* Info.plist */,
+				0326580C1CE573FB0013D33B /* IsaoTextField.swift */,
+				0326580D1CE573FB0013D33B /* JiroTextField.swift */,
+				0326580E1CE573FB0013D33B /* KaedeTextField.swift */,
+				0326580F1CE573FB0013D33B /* MadokaTextField.swift */,
+				032658101CE573FB0013D33B /* MinoruTextField.swift */,
+				032658111CE573FB0013D33B /* TextFieldEffects.h */,
+				032658121CE573FB0013D33B /* TextFieldsEffects.swift */,
+				032658131CE573FB0013D33B /* YokoTextField.swift */,
+				032658141CE573FB0013D33B /* YoshikoTextField.swift */,
+			);
+			path = TextFieldEffects;
+			sourceTree = "<group>";
+		};
+		032658201CE5A1CE0013D33B /* MGSwipeTableCell */ = {
+			isa = PBXGroup;
+			children = (
+				032658211CE5A1CE0013D33B /* Info.plist */,
+				032658221CE5A1CE0013D33B /* MGSwipeButton.h */,
+				032658231CE5A1CE0013D33B /* MGSwipeButton.m */,
+				032658241CE5A1CE0013D33B /* MGSwipeTableCell.h */,
+				032658251CE5A1CE0013D33B /* MGSwipeTableCell.m */,
+			);
+			path = MGSwipeTableCell;
+			sourceTree = "<group>";
+		};
 		14A68E8B1CC17C71008671DB = {
 			isa = PBXGroup;
 			children = (
@@ -255,9 +317,11 @@
 		14A68E961CC17C71008671DB /* Dealer Image Pro */ = {
 			isa = PBXGroup;
 			children = (
+				032658201CE5A1CE0013D33B /* MGSwipeTableCell */,
 				2809FE631CD3B99900E6F8D3 /* externalLib */,
 				2809FE5B1CD3B8CD00E6F8D3 /* models */,
 				28387CF51CD39CF7006BB567 /* frmwork */,
+				032658081CE573FB0013D33B /* TextFieldEffects */,
 				14A68ECF1CC19381008671DB /* gotham-book.ttf */,
 				14A68E9A1CC17C71008671DB /* AppDelegate.h */,
 				14A68E9B1CC17C71008671DB /* AppDelegate.m */,
@@ -544,7 +608,9 @@
 			files = (
 				14A68EAA1CC17C71008671DB /* LaunchScreen.storyboard in Resources */,
 				14A68EA71CC17C71008671DB /* Assets.xcassets in Resources */,
+				032658261CE5A1CE0013D33B /* Info.plist in Resources */,
 				14A68EA21CC17C71008671DB /* Main.storyboard in Resources */,
+				032658171CE573FB0013D33B /* Info.plist in Resources */,
 				14A68ED01CC19381008671DB /* gotham-book.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -572,15 +638,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0326581F1CE573FB0013D33B /* YoshikoTextField.swift in Sources */,
 				282EFD7E1CD46C0800E29E74 /* SCAudioTools.m in Sources */,
 				14A68EA51CC17C71008671DB /* Dealer_Image_Pro.xcdatamodeld in Sources */,
+				032658281CE5A1CE0013D33B /* MGSwipeTableCell.m in Sources */,
 				282EFD871CD46C0800E29E74 /* SCRecordSessionManager.m in Sources */,
+				0326581A1CE573FB0013D33B /* KaedeTextField.swift in Sources */,
+				032658161CE573FB0013D33B /* HoshiTextField.swift in Sources */,
 				282EFD701CD46C0800E29E74 /* SCPhotoConfiguration.m in Sources */,
+				0326581E1CE573FB0013D33B /* YokoTextField.swift in Sources */,
 				14A68E9F1CC17C71008671DB /* ViewController.m in Sources */,
+				032658271CE5A1CE0013D33B /* MGSwipeButton.m in Sources */,
+				032658151CE573FB0013D33B /* AkiraTextField.swift in Sources */,
 				282EFD791CD46C0800E29E74 /* SCFilter+VideoComposition.m in Sources */,
 				282EFD731CD46C0800E29E74 /* SCFilterImageView.m in Sources */,
 				282EFD801CD46C0800E29E74 /* SCProcessingQueue.m in Sources */,
 				282EFD811CD46C0800E29E74 /* SCRecorder.m in Sources */,
+				032658181CE573FB0013D33B /* IsaoTextField.swift in Sources */,
 				282EFD841CD46C0800E29E74 /* SCRecorderToolsView.m in Sources */,
 				282EFD7B1CD46C0800E29E74 /* SCFilterAnimation.m in Sources */,
 				032658021CE4C8CE0013D33B /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
@@ -590,6 +664,7 @@
 				282EFD751CD46C0800E29E74 /* SCPlayer.m in Sources */,
 				2809FE661CD3B99900E6F8D3 /* DBHelper.m in Sources */,
 				282EFD7A1CD46C0800E29E74 /* SCFilter.m in Sources */,
+				032658191CE573FB0013D33B /* JiroTextField.swift in Sources */,
 				282EFD7D1CD46C0800E29E74 /* SCAssetExportSession.m in Sources */,
 				282EFD721CD46C0800E29E74 /* SCContext.m in Sources */,
 				282EFD711CD46C0800E29E74 /* SCVideoConfiguration.m in Sources */,
@@ -601,6 +676,8 @@
 				282EFD8D1CD46C0800E29E74 /* UIImage+SCSaveToCameraRoll.m in Sources */,
 				282EFD7F1CD46C0800E29E74 /* SCIOPixelBuffers.m in Sources */,
 				282EFD821CD46C0800E29E74 /* SCRecorderFocusTargetView.m in Sources */,
+				0326581D1CE573FB0013D33B /* TextFieldsEffects.swift in Sources */,
+				0326581B1CE573FB0013D33B /* MadokaTextField.swift in Sources */,
 				282EFD8B1CD46C0800E29E74 /* SCTouchDetector.m in Sources */,
 				2830C4C91CD4AF4400F1FC58 /* ConfirmViewController.m in Sources */,
 				2809FE621CD3B90400E6F8D3 /* UploadImages.m in Sources */,
@@ -618,6 +695,7 @@
 				282EFD6F1CD46C0800E29E74 /* SCMediaTypeConfiguration.m in Sources */,
 				282EFD8C1CD46C0800E29E74 /* SCWeakSelectorTarget.m in Sources */,
 				282EFD911CD48F2E00E29E74 /* ImagePreviewViewController.m in Sources */,
+				0326581C1CE573FB0013D33B /* MinoruTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -856,6 +934,9 @@
 					"$(PROJECT_DIR)/Dealer",
 					Image,
 					Pro/frmwork,
+					"$(PROJECT_DIR)/Dealer",
+					Image,
+					Pro/frmwork,
 				);
 				GCC_PREFIX_HEADER = "Dealer Image Pro/DealerImagePrefixHeader.pch";
 				INFOPLIST_FILE = "Dealer Image Pro/Info.plist";
@@ -876,6 +957,9 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(PROJECT_DIR)/Dealer",
+					Image,
+					Pro/frmwork,
 					"$(PROJECT_DIR)/Dealer",
 					Image,
 					Pro/frmwork,

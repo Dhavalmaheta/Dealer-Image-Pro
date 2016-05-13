@@ -157,30 +157,17 @@
         return;
     }
     
-    if (_vehicleType.selectedSegmentIndex==0){
-        
-        strMainPath = [self genDirectory];
+            strMainPath = [self genDirectory];
         [self createDirForImage:strMainPath];
         
         ImageCaptureViewController *newView = [self.storyboard instantiateViewControllerWithIdentifier:@"ImageCaptureViewController"];
         newView.strDirPath = strMainPath;
         newView.strStockNumber = _stockNumer.text;
         [self.navigationController pushViewController:newView animated:YES];
-    }
-    
-    if (_vehicleType.selectedSegmentIndex==1){
-        
-        strMainPath = [self genDirectory];
-        [self createDirForImage:strMainPath];
-        
-        ImageCaptureViewController *newView = [self.storyboard instantiateViewControllerWithIdentifier:@"ImageCaptureViewController2"];
-        newView.strDirPath = strMainPath;
-        newView.strStockNumber = _stockNumer.text;
-        [self.navigationController pushViewController:newView animated:YES];
-    }
-    
+           
 
     }else {
+        [_stockNumer becomeFirstResponder];
         _vinNumberLabel.textColor = [UIColor colorWithRed:255.0/255.0 green:0.0/255.0 blue:0.0/255.0 alpha:1.0];
         _confirmVinLabel.textColor = [UIColor colorWithRed:255.0/255.0 green:0.0/255.0 blue:0.0/255.0 alpha:1.0];
         
@@ -275,6 +262,7 @@
     }
     return NO; // We do not want UITextField to insert line-breaks.
 }
+
 
 
 @end

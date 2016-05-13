@@ -8,7 +8,8 @@
 
 #import "ViewController.h"
 #import "ImageCaptureViewController.h"
-
+#import "MGSwipeButton.h"
+#import "MGSwipeTableCell.h"
 #import <QuartzCore/QuartzCore.h>
 #import <DropboxSDK/DropboxSDK.h>
 #import <stdlib.h>
@@ -157,6 +158,30 @@
     return cell;
 }
 
+//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+//    static NSString * reuseIdentifier = @"programmaticCell";
+//    MGSwipeTableCell * carCell = [tableView dequeueReusableCellWithIdentifier: @"carCell"];
+//    if (!carCell) {
+//        carCell = [[MGSwipeTableCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:reuseIdentifier];
+//    }
+//    
+//    carCell.textLabel.text = @"Title";
+//    carCell.detailTextLabel.text = @"Detail text";
+//    carCell.delegate = self; //optional
+//    
+//    
+//    //configure left buttons
+//    carCell.leftButtons = @[[MGSwipeButton buttonWithTitle:@"" icon:[UIImage imageNamed:@"check.png"] backgroundColor:[UIColor greenColor]],
+//                         [MGSwipeButton buttonWithTitle:@"" icon:[UIImage imageNamed:@"fav.png"] backgroundColor:[UIColor blueColor]]];
+//    carCell.leftSwipeSettings.transition = MGSwipeTransition3D;
+//    
+//    //configure right buttons
+//    carCell.rightButtons = @[[MGSwipeButton buttonWithTitle:@"Delete" backgroundColor:[UIColor redColor]],
+//                          [MGSwipeButton buttonWithTitle:@"More" backgroundColor:[UIColor lightGrayColor]]];
+//    carCell.rightSwipeSettings.transition = MGSwipeTransition3D;
+//    return carCell;
+//}
+
 -(void)deleteButtonClickAtIndex:(int)index
 {
     if([fileList count] > index){
@@ -204,14 +229,6 @@
     }
 }
 
-// Makes upload icon gray when no vehicles are in the list. Yellow if there are.
-//
-//-(void)setUploadIconColor:(NSString *)iconColor {
-//if([uploadArray count] ==0){
-//    _uploadIcon.hidden = true;
-//}
-//
-//}
 
 -(void)createFolderInDropboxWithName:(NSString *)strName
 {
